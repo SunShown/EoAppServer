@@ -2,6 +2,7 @@ package com.liu.xutils.ManageTeam;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
 import com.liu.db.DBImp;
 import com.liu.db.DbPool;
 import com.liu.xutils.pojo.Group;
@@ -82,8 +86,9 @@ public class ManageGroup extends HttpServlet {
 			}
 		} else if (request.getParameter("editMember") != null) {
 			String userStr = request.getParameter("user");
-			// System.out.println(userStr);
+			 System.out.println(userStr);
 			Gson gson = new Gson();
+			
 			User user = gson.fromJson(userStr, User.class);
 			if (request.getParameter("deleteMember") != null) {
 				int length=DBImp.getInstance().deleteUserFromGroup(user.getId());

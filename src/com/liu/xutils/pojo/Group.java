@@ -17,7 +17,7 @@ public class Group {
 	private Long tcId;//公司id;
 	private List<User> users;
 	@ValueSearch("tg_leader")
-	private Long tgLeaderId;
+	private Long tgLeaderId = 0L;
 	private Company company;
 	
 	public Company getCompany() {

@@ -66,10 +66,10 @@ public class CreateCompany extends HttpServlet {
         group.setParentTgId(0L);
         group.setTcId(id);
         group.setTgName(name);
-        gid=idb.addGroup(group);
         group.setTgId(gid);
         group.setCompany(company);
         group.setTgLeaderId(Long.parseLong(userId));
+        gid=idb.addGroup(group);
         boolean addboss=idb.setUserBoss(Long.parseLong(userId));
         System.out.println(gid);
         addnum=idb.addMembersToCreateGruop(list, gid);

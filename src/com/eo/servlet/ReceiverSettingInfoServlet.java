@@ -26,6 +26,8 @@ public class ReceiverSettingInfoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String receiverString = URLDecoder.decode(request.getParameter("companySignSettingInfo"), "utf-8");
 		String companyIdString = request.getParameter("companyId");
+		System.out.println(companyIdString);
+		
 		int companyIdInt = Integer.valueOf(companyIdString);
 		Gson myGson = new Gson();
 		CompanySignSettingInfoBean companySignSettingInfo = myGson.fromJson(receiverString,com.eo.entity.CompanySignSettingInfoBean.class);

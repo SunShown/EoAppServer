@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : Eo
+Source Server         : adscreen
 Source Server Version : 50712
 Source Host           : localhost:3306
 Source Database       : eo
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50712
 File Encoding         : 65001
 
-Date: 2017-05-14 23:01:13
+Date: 2017-05-31 18:37:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,7 +29,7 @@ CREATE TABLE `approve` (
   `state` int(1) NOT NULL DEFAULT '0',
   `ispass` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`approveId`)
-) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of approve
@@ -72,7 +72,7 @@ INSERT INTO `approve` VALUES ('101', 'contestuser的请假', '1', '34', '2016-11
 INSERT INTO `approve` VALUES ('102', '345的请假', '1', '44', '2016-11-08 19:52:48', '2016-11-08 19:52:48', '0', '0');
 INSERT INTO `approve` VALUES ('103', '400的请假', '1', '45', '2016-11-08 19:54:30', '2016-11-08 19:54:30', '0', '0');
 INSERT INTO `approve` VALUES ('104', 'dage的请假', '1', '31', '2016-11-08 20:06:36', '2016-11-08 20:06:36', '1', '1');
-INSERT INTO `approve` VALUES ('105', '刘的请假', '1', '1', '2016-11-08 20:11:27', '2016-11-08 20:11:27', '0', '0');
+INSERT INTO `approve` VALUES ('105', '刘的请假', '1', '1', '2016-11-08 20:11:27', '2017-05-21 11:17:28', '2', '0');
 INSERT INTO `approve` VALUES ('107', '400的请假', '1', '45', '2016-11-08 20:29:15', '2016-11-08 20:29:15', '1', '1');
 INSERT INTO `approve` VALUES ('108', '400的请假', '1', '45', '2016-11-08 20:34:48', '2016-11-08 20:34:48', '1', '1');
 INSERT INTO `approve` VALUES ('109', '400的出差', '2', '45', '2016-11-08 20:37:00', '2016-11-08 20:37:00', '1', '1');
@@ -82,6 +82,16 @@ INSERT INTO `approve` VALUES ('115', '400的请假', '1', '45', '2016-11-08 20:4
 INSERT INTO `approve` VALUES ('116', 'liu的请假', '1', '4', '2016-11-09 09:17:35', '2016-11-09 09:17:35', '0', '0');
 INSERT INTO `approve` VALUES ('117', 'liu的请假', '1', '4', '2016-11-08 20:43:07', '2016-11-08 20:43:07', '0', '0');
 INSERT INTO `approve` VALUES ('118', '刘的请假', '1', '1', '2016-11-08 21:01:36', '2016-11-08 21:01:36', '1', '1');
+INSERT INTO `approve` VALUES ('119', '刘的请假', '1', '1', '2017-05-30 12:44:45', '2017-05-30 12:44:45', '0', '0');
+INSERT INTO `approve` VALUES ('120', '刘的请假', '1', '1', '2017-05-30 12:44:50', '2017-05-30 12:44:50', '0', '0');
+INSERT INTO `approve` VALUES ('121', '张三的请假', '1', '47', '2017-05-30 13:48:58', '2017-05-30 13:48:58', '1', '2');
+INSERT INTO `approve` VALUES ('122', '张三的报销', '3', '47', '2017-05-30 13:59:24', '2017-05-30 13:59:24', '1', '2');
+INSERT INTO `approve` VALUES ('123', '李四的请假', '1', '49', '2017-05-30 14:21:01', '2017-05-30 14:21:01', '1', '1');
+INSERT INTO `approve` VALUES ('124', '张三的请假', '1', '47', '2017-05-30 14:28:14', '2017-05-30 14:28:14', '1', '1');
+INSERT INTO `approve` VALUES ('125', '刘菲炫的请假', '1', '48', '2017-05-31 12:10:56', '2017-05-31 12:10:56', '1', '1');
+INSERT INTO `approve` VALUES ('126', '张三的请假', '1', '47', '2017-05-31 00:11:52', '2017-05-31 00:11:52', '0', '0');
+INSERT INTO `approve` VALUES ('127', '李四的请假', '1', '49', '2017-05-31 12:15:32', '2017-05-31 12:15:32', '0', '0');
+INSERT INTO `approve` VALUES ('128', '刘菲炫的请假', '1', '48', '2017-05-31 01:50:31', '2017-05-31 01:50:31', '1', '2');
 
 -- ----------------------------
 -- Table structure for approvedata
@@ -151,7 +161,7 @@ CREATE TABLE `approvedata` (
   `text_9` text,
   `text_10` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of approvedata
@@ -218,6 +228,16 @@ INSERT INTO `approvedata` VALUES ('67', '115', 'wdqdwq', '其他', null, null, n
 INSERT INTO `approvedata` VALUES ('68', '116', '啦啦啦', '病假', null, null, null, null, null, null, null, null, null, '4', null, null, null, null, null, null, null, null, '2016-11-09 00:00:00', '2016-11-11 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 INSERT INTO `approvedata` VALUES ('69', '117', '222', '事假', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2016-11-08 00:00:00', '2016-11-11 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 INSERT INTO `approvedata` VALUES ('70', '118', 'efe', '其他', null, null, null, null, null, null, null, null, null, '1', null, null, null, null, null, null, null, null, '2016-11-04 00:00:00', '2016-11-08 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('71', '119', '做毕设', '病假', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2017-05-30 00:00:00', '2017-05-31 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('72', '120', '做毕设', '病假', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2017-05-30 00:00:00', '2017-05-31 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('73', '121', '回学校答辩啊', '事假', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2017-05-30 00:00:00', '2017-05-31 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('74', '122', '木材', '活动', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, '20', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('75', '123', '无聊', '产假', null, null, null, null, null, null, null, null, null, '1', null, null, null, null, null, null, null, null, '2017-05-30 00:00:00', '2017-05-30 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('76', '124', '调休', '调休', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2017-05-30 00:00:00', '2017-05-31 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('77', '125', '有事', '年假', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2017-05-31 00:00:00', '2017-06-01 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('78', '126', 'miyjkjk', '病假', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2017-05-31 00:00:00', '2017-06-01 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('79', '127', '头晕', '调休', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2017-05-31 00:00:00', '2017-06-01 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `approvedata` VALUES ('80', '128', 'hghgh', '病假', null, null, null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, '2017-05-31 00:00:00', '2017-06-01 00:00:00', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for approveimg
@@ -228,7 +248,7 @@ CREATE TABLE `approveimg` (
   `approveId` int(255) DEFAULT NULL,
   `imgurl` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of approveimg
@@ -246,6 +266,18 @@ INSERT INTO `approveimg` VALUES ('61', '97', '20161108_185153_31efaa71-6d3b-4e53
 INSERT INTO `approveimg` VALUES ('62', '116', '20161109_091734_96fcddcb-641a-40e7-bf54-e0e98340b188.png');
 INSERT INTO `approveimg` VALUES ('63', '116', '20161109_091735_692f5762-df10-4c8d-9859-ff7617ed82d3.png');
 INSERT INTO `approveimg` VALUES ('64', '117', '20161108_204306_e5572e45-6454-42da-9b6d-c6f506d7ce9b.png');
+INSERT INTO `approveimg` VALUES ('65', '119', '20170530_124444_087ee3fe-15f2-4c20-9c1a-a2fa9d949823.png');
+INSERT INTO `approveimg` VALUES ('66', '120', '20170530_124444_087ee3fe-15f2-4c20-9c1a-a2fa9d949823.png');
+INSERT INTO `approveimg` VALUES ('67', '120', '20170530_124450_e18452b9-689b-46f4-bb7c-b7d1929f056c.png');
+INSERT INTO `approveimg` VALUES ('68', '121', '20170530_134858_aac5d4f6-012d-4548-a498-aff59b0bc76f.png');
+INSERT INTO `approveimg` VALUES ('69', '122', '20170530_135924_03bbdb36-9ea0-42c7-9252-79361ab01911.png');
+INSERT INTO `approveimg` VALUES ('70', '123', '20170530_142101_73e9c504-fb4e-4db3-b70b-df6187ac1ad4.png');
+INSERT INTO `approveimg` VALUES ('71', '123', '20170530_142101_2dade03b-9c9f-44a7-b977-369229c20dfe.png');
+INSERT INTO `approveimg` VALUES ('72', '124', '20170530_142814_6e4074d8-4be5-49cc-9ae2-f3dfd3875efc.png');
+INSERT INTO `approveimg` VALUES ('73', '124', '20170530_142814_98e15021-6f2e-4322-be3f-60f2e5a523ea.png');
+INSERT INTO `approveimg` VALUES ('74', '124', '20170530_142814_db22ec95-a116-4abf-bef3-0c4727beb03f.png');
+INSERT INTO `approveimg` VALUES ('75', '124', '20170530_142814_32617380-a5a6-4589-a993-9e180e110470.png');
+INSERT INTO `approveimg` VALUES ('76', '125', '20170531_121056_173db3cb-2343-405e-9c82-63186b21e76c.png');
 
 -- ----------------------------
 -- Table structure for approverule
@@ -281,7 +313,7 @@ CREATE TABLE `approvestate` (
   `approveId` int(255) DEFAULT NULL,
   `isself` bit(1) DEFAULT b'0',
   PRIMARY KEY (`approvestateId`)
-) ENGINE=InnoDB AUTO_INCREMENT=416 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=445 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of approvestate
@@ -345,8 +377,8 @@ INSERT INTO `approvestate` VALUES ('256', '4', '255', null, '2', null, '1', '\0'
 INSERT INTO `approvestate` VALUES ('257', '4', '256', null, '2', null, '4', '\0', '77', '\0');
 INSERT INTO `approvestate` VALUES ('258', '4', '253', null, '0', '2016-11-08 00:42:56', '4', '', '77', '');
 INSERT INTO `approvestate` VALUES ('259', '4', '0', null, '1', '2016-11-08 00:43:42', '4', '\0', '78', '');
-INSERT INTO `approvestate` VALUES ('260', '4', '259', null, '2', null, '1', '', '78', '\0');
-INSERT INTO `approvestate` VALUES ('261', '4', '260', null, '2', null, '3', '\0', '78', '\0');
+INSERT INTO `approvestate` VALUES ('260', '4', '259', '同意', '1', '2017-05-30 13:34:59', '1', '\0', '78', '\0');
+INSERT INTO `approvestate` VALUES ('261', '4', '260', null, '2', null, '3', '', '78', '\0');
 INSERT INTO `approvestate` VALUES ('262', '4', '261', null, '2', null, '5', '\0', '78', '\0');
 INSERT INTO `approvestate` VALUES ('263', '4', '0', null, '1', '2016-11-08 00:48:13', '4', '\0', '79', '');
 INSERT INTO `approvestate` VALUES ('264', '4', '263', null, '2', null, '3', '', '79', '\0');
@@ -476,7 +508,7 @@ INSERT INTO `approvestate` VALUES ('387', '31', '386', 'dwdw', '1', '2016-11-08 
 INSERT INTO `approvestate` VALUES ('388', '31', '387', 'rew', '1', '2016-11-08 20:08:23', '1', '\0', '104', '\0');
 INSERT INTO `approvestate` VALUES ('389', '1', '0', null, '1', '2016-11-08 20:11:27', '1', '\0', '105', '');
 INSERT INTO `approvestate` VALUES ('390', '1', '389', '同意', '1', '2017-04-16 17:10:45', '1', '\0', '105', '\0');
-INSERT INTO `approvestate` VALUES ('391', '1', '390', null, '2', null, '5', '', '105', '\0');
+INSERT INTO `approvestate` VALUES ('391', '1', '416', null, '2', null, '5', '\0', '105', '\0');
 INSERT INTO `approvestate` VALUES ('392', '1', '391', null, '2', null, '1', '\0', '105', '\0');
 INSERT INTO `approvestate` VALUES ('393', '45', '0', null, '1', '2016-11-08 20:23:39', '45', '\0', '106', '');
 INSERT INTO `approvestate` VALUES ('394', '45', '0', null, '1', '2016-11-08 20:29:15', '45', '\0', '107', '');
@@ -501,6 +533,35 @@ INSERT INTO `approvestate` VALUES ('412', '1', '0', null, '1', '2016-11-08 21:01
 INSERT INTO `approvestate` VALUES ('413', '1', '412', 'fefef', '1', '2016-11-08 21:01:47', '1', '\0', '118', '\0');
 INSERT INTO `approvestate` VALUES ('414', '1', '413', '', '1', '2016-11-08 21:02:38', '5', '\0', '118', '\0');
 INSERT INTO `approvestate` VALUES ('415', '1', '414', '', '1', '2016-11-08 21:03:04', '1', '\0', '118', '\0');
+INSERT INTO `approvestate` VALUES ('416', '1', '390', null, '0', '2017-05-21 11:17:28', '1', '', '105', '');
+INSERT INTO `approvestate` VALUES ('417', '1', '0', null, '1', '2017-05-30 12:44:45', '1', '\0', '119', '');
+INSERT INTO `approvestate` VALUES ('418', '1', '0', null, '1', '2017-05-30 12:44:50', '1', '\0', '120', '');
+INSERT INTO `approvestate` VALUES ('419', '47', '0', null, '1', '2017-05-30 13:48:58', '47', '\0', '121', '');
+INSERT INTO `approvestate` VALUES ('420', '47', '419', '不同意', '0', '2017-05-30 14:01:42', '47', '', '121', '\0');
+INSERT INTO `approvestate` VALUES ('421', '47', '0', null, '1', '2017-05-30 13:59:24', '47', '\0', '122', '');
+INSERT INTO `approvestate` VALUES ('422', '47', '421', '不同意', '0', '2017-05-30 13:59:45', '47', '', '122', '\0');
+INSERT INTO `approvestate` VALUES ('423', '47', '422', null, '2', null, '47', '\0', '122', '\0');
+INSERT INTO `approvestate` VALUES ('424', '49', '0', null, '1', '2017-05-30 14:21:01', '49', '\0', '123', '');
+INSERT INTO `approvestate` VALUES ('425', '49', '424', '同意', '1', '2017-05-30 14:22:01', '47', '\0', '123', '\0');
+INSERT INTO `approvestate` VALUES ('426', '47', '0', null, '1', '2017-05-30 14:28:14', '47', '\0', '124', '');
+INSERT INTO `approvestate` VALUES ('427', '47', '426', '可以小伙子', '1', '2017-05-31 00:51:42', '48', '\0', '124', '\0');
+INSERT INTO `approvestate` VALUES ('428', '47', '427', '同意', '1', '2017-05-31 00:51:54', '47', '\0', '124', '\0');
+INSERT INTO `approvestate` VALUES ('429', '48', '0', null, '1', '2017-05-31 12:10:56', '48', '\0', '125', '');
+INSERT INTO `approvestate` VALUES ('430', '48', '429', '同意', '1', '2017-05-31 12:12:22', '48', '\0', '125', '\0');
+INSERT INTO `approvestate` VALUES ('431', '48', '430', '4545', '1', '2017-05-31 00:12:26', '47', '\0', '125', '\0');
+INSERT INTO `approvestate` VALUES ('432', '48', '431', 'hao', '1', '2017-05-31 00:12:40', '47', '\0', '125', '\0');
+INSERT INTO `approvestate` VALUES ('433', '47', '0', null, '1', '2017-05-31 00:11:52', '47', '\0', '126', '');
+INSERT INTO `approvestate` VALUES ('434', '47', '433', null, '2', null, '48', '', '126', '\0');
+INSERT INTO `approvestate` VALUES ('435', '47', '434', null, '2', null, '47', '\0', '126', '\0');
+INSERT INTO `approvestate` VALUES ('436', '47', '435', null, '2', null, '47', '\0', '126', '\0');
+INSERT INTO `approvestate` VALUES ('437', '49', '0', null, '1', '2017-05-31 12:15:32', '49', '\0', '127', '');
+INSERT INTO `approvestate` VALUES ('438', '49', '437', 'ok', '1', '2017-05-31 00:16:36', '48', '\0', '127', '\0');
+INSERT INTO `approvestate` VALUES ('439', '49', '438', '同意', '1', '2017-05-31 12:17:36', '47', '\0', '127', '\0');
+INSERT INTO `approvestate` VALUES ('440', '49', '439', null, '2', null, '47', '', '127', '\0');
+INSERT INTO `approvestate` VALUES ('441', '48', '0', null, '1', '2017-05-31 01:50:31', '48', '\0', '128', '');
+INSERT INTO `approvestate` VALUES ('442', '48', '441', 'jjh', '1', '2017-05-31 01:50:45', '48', '\0', '128', '\0');
+INSERT INTO `approvestate` VALUES ('443', '48', '442', '同意', '1', '2017-05-31 13:51:18', '47', '\0', '128', '\0');
+INSERT INTO `approvestate` VALUES ('444', '48', '443', '不同意', '0', '2017-05-31 13:51:35', '47', '', '128', '\0');
 
 -- ----------------------------
 -- Table structure for approvestateimg
@@ -511,7 +572,7 @@ CREATE TABLE `approvestateimg` (
   `imgurl` varchar(200) DEFAULT NULL,
   `approvestateid` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of approvestateimg
@@ -530,6 +591,7 @@ INSERT INTO `approvestateimg` VALUES ('11', '20161108_185358_a2fd5466-b69d-4428-
 INSERT INTO `approvestateimg` VALUES ('12', '20161108_185358_f3c7eaea-99e1-4e2c-8a66-ffd69e6fc07a.png', '354');
 INSERT INTO `approvestateimg` VALUES ('13', '20161108_185358_586e6c1c-fffe-4c32-97b1-15db5cff6974.png', '354');
 INSERT INTO `approvestateimg` VALUES ('14', '20161108_185358_b5953bd1-e270-491b-9a0e-9100305f37e0.png', '354');
+INSERT INTO `approvestateimg` VALUES ('15', '20170531_135118_27bffddb-9094-43c6-b53f-9e4dfa2a6a7c.png', '443');
 
 -- ----------------------------
 -- Table structure for approve_column
@@ -648,18 +710,23 @@ CREATE TABLE `company_setting` (
   `companySnippet` varchar(255) NOT NULL,
   `effectiveRange` int(11) NOT NULL,
   `elasticityTime` int(11) NOT NULL,
-  `lateTime` int(11) NOT NULL,
-  `earliestTime` int(11) NOT NULL,
+  `lateTime` int(11) NOT NULL DEFAULT '30',
+  `earliestTime` int(11) NOT NULL DEFAULT '30',
   `onRemindTime` int(11) DEFAULT NULL,
   `offRemindTime` int(11) DEFAULT NULL,
   `hardworkingTime` int(11) NOT NULL,
+  `workWeeks` varchar(255) DEFAULT NULL,
+  `breakWeeks` varchar(255) DEFAULT NULL,
+  `isAutoBreakByLaw` bit(2) DEFAULT NULL,
+  `isNextWeek` bit(2) DEFAULT NULL,
   PRIMARY KEY (`SettingId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of company_setting
 -- ----------------------------
-INSERT INTO `company_setting` VALUES ('1', '1', '09:30', '11:30', '31.274979', '120.743518', '苏州工业园区云彩创新孵化器', '仁爱路与林泉街交叉口西南150米', '300', '10', '30', '40', null, null, '10');
+INSERT INTO `company_setting` VALUES ('1', '1', '09:30', '11:30', '31.274979', '120.743518', '苏州工业园区云彩创新孵化器', '仁爱路与林泉街交叉口西南150米', '300', '10', '30', '40', null, null, '0', null, null, null, null);
+INSERT INTO `company_setting` VALUES ('6', '69', '10:30', '18:30', '31.895884', '120.570667', '江苏科技大学张家港校区苏州理工学院综合保障部', '北二环路附近', '350', '30', '30', '9', null, null, '6', ' 周一 周二 周三 周四 周五 ', '周六 周日 ', '\0', '\0');
 
 -- ----------------------------
 -- Table structure for holidaydate
@@ -750,147 +817,58 @@ CREATE TABLE `signinandoffinfo` (
   `signInStatus` int(11) NOT NULL DEFAULT '0',
   `signOffStatus` int(11) NOT NULL DEFAULT '0',
   `workTimes` int(11) NOT NULL DEFAULT '0',
+  `lateTimes` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `earlyOffTimes` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`signInAndOffId`)
-) ENGINE=InnoDB AUTO_INCREMENT=151 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=195 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of signinandoffinfo
 -- ----------------------------
-INSERT INTO `signinandoffinfo` VALUES ('1', '1', '1', '21:33', '21:00', '2016-11-02', '1', '2', '660');
-INSERT INTO `signinandoffinfo` VALUES ('2', '2', '1', '10:13', '21:20', '2016-11-02', '3', '7', '550');
-INSERT INTO `signinandoffinfo` VALUES ('3', '3', '1', '10:17', '21:20', '2016-11-02', '3', '1', '660');
-INSERT INTO `signinandoffinfo` VALUES ('4', '4', '1', '10:22', '21:20', '2016-11-02', '1', '7', '650');
-INSERT INTO `signinandoffinfo` VALUES ('5', '5', '1', '10:37', '21:20', '2016-11-02', '3', '1', '670');
-INSERT INTO `signinandoffinfo` VALUES ('6', '120', '1', '15:06', '21:20', '2016-11-02', '1', '7', '550');
-INSERT INTO `signinandoffinfo` VALUES ('8', '1', '1', '19:27', '21:20', '2016-11-03', '1', '7', '670');
-INSERT INTO `signinandoffinfo` VALUES ('9', '2', '1', '19:35', '21:20', '2016-11-03', '3', '2', '610');
-INSERT INTO `signinandoffinfo` VALUES ('10', '3', '1', '19:36', '21:20', '2016-11-03', '3', '7', '620');
-INSERT INTO `signinandoffinfo` VALUES ('11', '4', '1', '19:41', '21:20', '2016-11-03', '1', '2', '630');
-INSERT INTO `signinandoffinfo` VALUES ('12', '5', '1', '19:54', '21:20', '2016-11-03', '1', '7', '640');
-INSERT INTO `signinandoffinfo` VALUES ('13', '120', '1', '20:05', '21:20', '2016-11-03', '3', '2', '650');
-INSERT INTO `signinandoffinfo` VALUES ('14', '222', '1', '20:10', '21:20', '2016-11-03', '1', '7', '660');
-INSERT INTO `signinandoffinfo` VALUES ('15', '333', '1', '20:15', '21:20', '2016-11-03', '1', '2', '560');
-INSERT INTO `signinandoffinfo` VALUES ('20', '123', '1', '20:55', '21:20', '2016-11-03', '1', '2', '640');
-INSERT INTO `signinandoffinfo` VALUES ('22', '111', '1', '21:19', '21:20', '2016-11-03', '3', '2', '660');
-INSERT INTO `signinandoffinfo` VALUES ('31', '1', '1', '08:30', '17:30', '2016-11-01', '1', '7', '540');
-INSERT INTO `signinandoffinfo` VALUES ('32', '2', '1', '09:30', '17:30', '2016-11-01', '3', '7', '480');
-INSERT INTO `signinandoffinfo` VALUES ('33', '3', '1', '08:30', '16:30', '2016-11-01', '1', '2', '480');
-INSERT INTO `signinandoffinfo` VALUES ('34', '4', '1', '08:50', '18:30', '2016-11-01', '1', '7', '580');
-INSERT INTO `signinandoffinfo` VALUES ('35', '5', '1', '09:50', '16:30', '2016-11-01', '3', '2', '400');
-INSERT INTO `signinandoffinfo` VALUES ('36', '1', '1', '12:44', '12:49', '2016-11-05', '1', '7', '640');
-INSERT INTO `signinandoffinfo` VALUES ('37', '120', '1', '09:50', '16:30', '2016-11-01', '3', '2', '400');
-INSERT INTO `signinandoffinfo` VALUES ('38', '222', '1', '09:50', '16:30', '2016-11-01', '3', '2', '400');
-INSERT INTO `signinandoffinfo` VALUES ('39', '333', '1', '09:50', '16:30', '2016-11-01', '1', '2', '400');
-INSERT INTO `signinandoffinfo` VALUES ('40', '123', '1', '09:50', '16:30', '2016-11-01', '3', '7', '400');
-INSERT INTO `signinandoffinfo` VALUES ('41', '111', '1', '09:50', '16:30', '2016-11-01', '1', '2', '400');
-INSERT INTO `signinandoffinfo` VALUES ('42', '222', '1', '09:50', '16:30', '2016-11-02', '1', '2', '400');
-INSERT INTO `signinandoffinfo` VALUES ('43', '333', '1', '09:50', '16:30', '2016-11-02', '3', '2', '400');
-INSERT INTO `signinandoffinfo` VALUES ('44', '123', '1', '09:50', '16:30', '2016-11-02', '3', '7', '400');
-INSERT INTO `signinandoffinfo` VALUES ('45', '1', '1', '09:50', '16:30', '2016-11-05', '3', '7', '620');
-INSERT INTO `signinandoffinfo` VALUES ('46', '2', '1', '09:50', '16:30', '2016-11-05', '3', '7', '670');
-INSERT INTO `signinandoffinfo` VALUES ('47', '3', '1', '09:50', '16:30', '2016-11-05', '3', '7', '720');
-INSERT INTO `signinandoffinfo` VALUES ('48', '4', '1', '09:50', '16:30', '2016-11-05', '3', '7', '520');
-INSERT INTO `signinandoffinfo` VALUES ('49', '5', '1', '09:50', '16:30', '2016-11-05', '3', '7', '680');
-INSERT INTO `signinandoffinfo` VALUES ('50', '120', '1', '09:50', '16:30', '2016-11-05', '3', '7', '628');
-INSERT INTO `signinandoffinfo` VALUES ('51', '222', '1', '09:50', '16:30', '2016-11-05', '3', '7', '610');
-INSERT INTO `signinandoffinfo` VALUES ('52', '333', '1', '09:50', '16:30', '2016-11-05', '3', '7', '650');
-INSERT INTO `signinandoffinfo` VALUES ('53', '123', '1', '09:50', '16:30', '2016-11-05', '3', '7', '624');
-INSERT INTO `signinandoffinfo` VALUES ('54', '111', '1', '09:50', '16:30', '2016-11-02', '3', '7', '610');
-INSERT INTO `signinandoffinfo` VALUES ('55', '111', '1', '09:50', '16:30', '2016-11-04', '3', '7', '624');
-INSERT INTO `signinandoffinfo` VALUES ('56', '123', '1', '09:50', '16:30', '2016-11-04', '3', '7', '680');
-INSERT INTO `signinandoffinfo` VALUES ('57', '333', '1', '09:50', '16:30', '2016-11-04', '3', '7', '650');
-INSERT INTO `signinandoffinfo` VALUES ('58', '222', '1', '09:50', '16:30', '2016-11-04', '3', '7', '620');
-INSERT INTO `signinandoffinfo` VALUES ('59', '120', '1', '09:50', '16:30', '2016-11-04', '3', '7', '628');
-INSERT INTO `signinandoffinfo` VALUES ('60', '5', '1', '09:50', '16:30', '2016-11-04', '3', '7', '624');
-INSERT INTO `signinandoffinfo` VALUES ('61', '4', '1', '09:50', '16:30', '2016-11-04', '3', '7', '620');
-INSERT INTO `signinandoffinfo` VALUES ('62', '3', '1', '09:50', '16:30', '2016-11-04', '3', '7', '720');
-INSERT INTO `signinandoffinfo` VALUES ('63', '2', '1', '09:50', '16:30', '2016-11-04', '3', '7', '520');
-INSERT INTO `signinandoffinfo` VALUES ('64', '1', '1', '09:50', '16:30', '2016-11-04', '3', '7', '620');
-INSERT INTO `signinandoffinfo` VALUES ('66', '0', '1', '21:30', '21:31', '2016-11-06', '1', '7', '1');
-INSERT INTO `signinandoffinfo` VALUES ('67', '1', '1', '00:00', '00:00', '2016-11-09', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('68', '1', '1', '00:00', '00:00', '2016-11-10', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('69', '1', '1', '00:00', '00:00', '2016-11-11', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('70', '45', '67', '00:00', '00:00', '2016-11-08', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('71', '45', '67', '00:00', '00:00', '2016-11-09', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('72', '45', '67', '00:00', '00:00', '2016-11-01', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('73', '45', '67', '00:00', '00:00', '2016-11-02', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('74', '45', '67', '00:00', '00:00', '2016-11-03', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('75', '45', '67', '00:00', '00:00', '2016-11-04', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('76', '45', '67', '00:00', '00:00', '2016-11-05', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('77', '45', '67', '00:00', '00:00', '2016-11-06', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('78', '45', '67', '00:00', '00:00', '2016-11-07', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('79', '45', '67', '00:00', '00:00', '2016-11-08', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('80', '45', '67', '00:00', '00:00', '2016-11-09', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('81', '45', '67', '00:00', '00:00', '2016-11-10', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('82', '45', '67', '00:00', '00:00', '2016-11-11', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('83', '45', '67', '00:00', '00:00', '2016-11-12', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('84', '45', '67', '00:00', '00:00', '2016-11-13', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('85', '45', '67', '00:00', '00:00', '2016-11-14', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('86', '45', '67', '00:00', '00:00', '2016-11-15', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('87', '45', '67', '00:00', '00:00', '2016-11-16', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('88', '45', '67', '00:00', '00:00', '2016-11-17', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('89', '45', '67', '00:00', '00:00', '2016-11-18', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('90', '45', '67', '00:00', '00:00', '2016-11-19', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('91', '45', '67', '00:00', '00:00', '2016-11-20', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('92', '45', '67', '00:00', '00:00', '2016-11-21', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('93', '45', '67', '00:00', '00:00', '2016-11-22', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('94', '45', '67', '00:00', '00:00', '2016-11-23', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('95', '45', '67', '00:00', '00:00', '2016-11-24', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('96', '45', '67', '00:00', '00:00', '2016-11-25', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('97', '45', '67', '00:00', '00:00', '2016-11-26', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('98', '45', '67', '00:00', '00:00', '2016-11-27', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('99', '45', '67', '00:00', '00:00', '2016-11-28', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('100', '45', '67', '00:00', '00:00', '2016-11-29', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('101', '45', '67', '00:00', '00:00', '2016-11-01', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('102', '45', '67', '00:00', '00:00', '2016-11-02', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('103', '45', '67', '00:00', '00:00', '2016-11-03', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('104', '45', '67', '00:00', '00:00', '2016-11-04', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('105', '45', '67', '00:00', '00:00', '2016-11-05', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('106', '45', '67', '00:00', '00:00', '2016-11-06', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('107', '45', '67', '00:00', '00:00', '2016-11-07', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('108', '45', '67', '00:00', '00:00', '2016-11-08', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('109', '45', '67', '00:00', '00:00', '2016-11-09', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('110', '45', '67', '00:00', '00:00', '2016-11-10', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('111', '45', '67', '00:00', '00:00', '2016-11-11', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('112', '45', '67', '00:00', '00:00', '2016-11-12', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('113', '45', '67', '00:00', '00:00', '2016-11-13', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('114', '45', '67', '00:00', '00:00', '2016-11-14', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('115', '45', '67', '00:00', '00:00', '2016-11-15', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('116', '45', '67', '00:00', '00:00', '2016-11-16', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('117', '45', '67', '00:00', '00:00', '2016-11-17', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('118', '45', '67', '00:00', '00:00', '2016-11-18', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('119', '45', '67', '00:00', '00:00', '2016-11-19', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('120', '45', '67', '00:00', '00:00', '2016-11-20', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('121', '45', '67', '00:00', '00:00', '2016-11-21', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('122', '45', '67', '00:00', '00:00', '2016-11-22', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('123', '45', '67', '00:00', '00:00', '2016-11-23', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('124', '45', '67', '00:00', '00:00', '2016-11-24', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('125', '45', '67', '00:00', '00:00', '2016-11-25', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('126', '45', '67', '00:00', '00:00', '2016-11-26', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('127', '45', '67', '00:00', '00:00', '2016-11-27', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('128', '45', '67', '00:00', '00:00', '2016-11-28', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('129', '45', '67', '00:00', '00:00', '2016-11-29', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('130', '45', '67', '00:00', '00:00', '2016-11-08', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('131', '45', '67', '00:00', '00:00', '2016-11-09', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('132', '45', '67', '00:00', '00:00', '2016-11-10', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('133', '45', '67', '00:00', '00:00', '2016-11-11', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('134', '45', '67', '00:00', '00:00', '2016-11-12', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('135', '45', '67', '00:00', '00:00', '2016-11-13', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('136', '45', '67', '00:00', '00:00', '2016-11-08', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('137', '45', '67', '00:00', '00:00', '2016-11-09', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('138', '45', '67', '00:00', '00:00', '2016-11-10', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('139', '45', '67', '00:00', '00:00', '2016-11-11', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('140', '45', '67', '00:00', '00:00', '2016-11-12', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('141', '45', '67', '00:00', '00:00', '2016-11-13', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('142', '4', '1', '10:04', '00:00', '2016-11-09', '3', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('143', '1', '15', '00:00', '00:00', '2016-11-08', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('144', '1', '15', '00:00', '00:00', '2016-11-09', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('145', '1', '15', '00:00', '00:00', '2016-11-10', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('146', '1', '15', '00:00', '00:00', '2016-11-11', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('147', '1', '15', '00:00', '00:00', '2016-11-08', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('148', '1', '15', '00:00', '00:00', '2016-11-09', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('149', '1', '15', '00:00', '00:00', '2016-11-10', '4', '0', '0');
-INSERT INTO `signinandoffinfo` VALUES ('150', '1', '15', '00:00', '00:00', '2016-11-11', '4', '0', '0');
+INSERT INTO `signinandoffinfo` VALUES ('151', '47', '69', '09:30', '18:33', '2017-05-29', '1', '1', '2', '2017-05-31 01:13:20', '2017-05-31 01:13:20');
+INSERT INTO `signinandoffinfo` VALUES ('152', '48', '69', '09:00', '18:30', '2017-05-29', '1', '1', '0', '2017-05-31 01:12:52', '2017-05-31 01:12:52');
+INSERT INTO `signinandoffinfo` VALUES ('153', '49', '69', '09:00', '18:30', '2017-05-29', '1', '1', '974', '2017-05-31 01:15:35', '2017-05-31 01:15:35');
+INSERT INTO `signinandoffinfo` VALUES ('154', '50', '69', '09:00', '18:30', '2017-05-29', '1', '1', '974', '2017-05-31 01:16:06', '2017-05-31 01:16:06');
+INSERT INTO `signinandoffinfo` VALUES ('155', '47', '69', '09:00', '18:30', '2017-05-30', '1', '1', '974', '2017-05-31 01:15:41', '2017-05-31 01:15:41');
+INSERT INTO `signinandoffinfo` VALUES ('156', '48', '69', '09:00', '18:30', '2017-05-30', '1', '1', '11', '2017-05-31 01:15:53', '2017-05-31 01:15:53');
+INSERT INTO `signinandoffinfo` VALUES ('157', '49', '69', '00:00', '00:00', '2017-05-30', '1', '1', '0', '2017-05-31 01:15:56', '2017-05-31 01:15:56');
+INSERT INTO `signinandoffinfo` VALUES ('158', '50', '69', '00:00', '00:00', '2017-05-30', '1', '1', '0', '2017-05-31 01:16:12', '2017-05-31 01:16:12');
+INSERT INTO `signinandoffinfo` VALUES ('159', '47', '69', '00:00', '00:00', '2017-05-28', '1', '1', '0', '2017-05-31 01:13:59', '2017-05-31 01:13:59');
+INSERT INTO `signinandoffinfo` VALUES ('160', '48', '69', '00:00', '00:00', '2017-05-28', '1', '1', '0', '2017-05-31 01:16:15', '2017-05-31 01:16:15');
+INSERT INTO `signinandoffinfo` VALUES ('161', '49', '69', '00:00', '00:00', '2017-05-28', '1', '1', '0', '2017-05-31 01:16:18', '2017-05-31 01:16:18');
+INSERT INTO `signinandoffinfo` VALUES ('162', '50', '69', '00:00', '00:00', '2017-05-28', '1', '1', '0', '2017-05-31 01:16:23', '2017-05-31 01:16:23');
+INSERT INTO `signinandoffinfo` VALUES ('163', '47', '69', '00:00', '00:00', '2017-05-27', '1', '1', '0', '2017-05-31 01:14:29', '2017-05-31 01:14:29');
+INSERT INTO `signinandoffinfo` VALUES ('164', '48', '69', '00:00', '00:00', '2017-05-27', '1', '1', '0', '2017-05-31 01:16:30', '2017-05-31 01:16:30');
+INSERT INTO `signinandoffinfo` VALUES ('165', '49', '69', '00:00', '00:00', '2017-05-27', '1', '1', '0', '2017-05-31 01:16:46', '2017-05-31 01:16:46');
+INSERT INTO `signinandoffinfo` VALUES ('166', '50', '69', '00:00', '00:00', '2017-05-27', '1', '1', '0', '2017-05-31 01:16:54', '2017-05-31 01:16:54');
+INSERT INTO `signinandoffinfo` VALUES ('167', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('168', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('169', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('170', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('171', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('172', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('173', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('174', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('175', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('176', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('177', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('178', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('179', '49', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('180', '49', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('181', '49', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('182', '49', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('183', '49', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('184', '49', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('185', '49', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('186', '49', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('187', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('188', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('189', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('190', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('191', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('192', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('193', '48', '69', '00:00', '00:00', '2017-05-31', '4', '0', '0', null, null);
+INSERT INTO `signinandoffinfo` VALUES ('194', '48', '69', '00:00', '00:00', '2017-06-01', '4', '0', '0', null, null);
 
 -- ----------------------------
 -- Table structure for tannouncement
@@ -913,7 +891,7 @@ CREATE TABLE `tannouncement` (
   `img_8` varchar(255) DEFAULT NULL,
   `img_9` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tannouncement
@@ -932,6 +910,11 @@ INSERT INTO `tannouncement` VALUES ('23', '158', 'liu', '4', '155', '2016-11-09'
 INSERT INTO `tannouncement` VALUES ('24', '3', '刘', '1', '33', '2016-11-08', '20161108_205022_bfbc8777-87c7-4467-89b9-3294736316b5.png', '', '', '', '', '', '', '', '');
 INSERT INTO `tannouncement` VALUES ('25', '33', '刘', '1', '333', '2016-11-08', '20161108_210030_e0ba94a4-6d78-44aa-b2fe-6875262479d6.png', '', '', '', '', '', '', '', '');
 INSERT INTO `tannouncement` VALUES ('26', '明天此时', '刘', '1', '开会', '2017-04-16', '20170416_172539_ee4aa079-ae03-4d77-b541-52ef8f83a0c0.png', '', '', '', '', '', '', '', '');
+INSERT INTO `tannouncement` VALUES ('27', '测试号', '18151587320', '47', '来咯来咯', '2017-05-29', '20170529_231401_f27081e8-406d-470d-bc19-1a76843bd23b.png', '', '', '', '', '', '', '', '');
+INSERT INTO `tannouncement` VALUES ('28', '测试号', '18151587320', '47', '来咯来咯', '2017-05-29', '20170529_231401_f27081e8-406d-470d-bc19-1a76843bd23b.png', '', '', '', '', '', '', '', '');
+INSERT INTO `tannouncement` VALUES ('29', '测试号', '18151587320', '47', '来咯来咯', '2017-05-29', '20170529_231401_f27081e8-406d-470d-bc19-1a76843bd23b.png', '', '', '', '', '', '', '', '');
+INSERT INTO `tannouncement` VALUES ('30', '啦啦啦', '刘', '1', '开会了', '2017-05-30', '20170530_104559_92b94b0b-97d1-4f18-b49d-a9388307d007.png', '', '', '', '', '', '', '', '');
+INSERT INTO `tannouncement` VALUES ('31', '同意', '张三', '47', '同', '2017-05-31', '20170531_135521_2b891358-c3b8-4c13-bad4-c066ac1a9119.png', '', '', '', '', '', '', '', '');
 
 -- ----------------------------
 -- Table structure for tchatgroup
@@ -944,46 +927,13 @@ CREATE TABLE `tchatgroup` (
   `createTime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `chatgroup_id` (`chatgroup_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tchatgroup
 -- ----------------------------
-INSERT INTO `tchatgroup` VALUES ('49', 'zhizh', 'ecf59d9f-8514-4bca-9602-323590a41495', '2016-11-09 04:27:05');
-INSERT INTO `tchatgroup` VALUES ('50', '123', 'c1307035-b4cf-4135-aa3c-5a78d4676ba5', '2016-10-19 19:33:18');
-INSERT INTO `tchatgroup` VALUES ('51', 'hhehedd', 'f8eca35b-5ea5-48bc-9eb6-91ca40debd68', '2016-10-20 19:58:01');
-INSERT INTO `tchatgroup` VALUES ('52', '刘菲炫、柴攀峰、刘广永、张一驰、曹读明、刘菲炫', 'c470ba01-fbc9-40af-9fc2-97127394ff25', '2016-10-19 15:46:20');
-INSERT INTO `tchatgroup` VALUES ('53', 'taolunzu ', '33da52a4-d82b-482e-8079-86c3cb0c3c46', '2016-10-19 23:55:43');
-INSERT INTO `tchatgroup` VALUES ('54', 'xinmingzi', '35e17e52-f856-402a-8793-dff937851757', '2016-10-20 20:34:58');
-INSERT INTO `tchatgroup` VALUES ('55', 'hheh', '490397c9-2123-4a6d-aad2-610339c1c651', '2016-10-20 19:55:55');
-INSERT INTO `tchatgroup` VALUES ('56', '刘菲炫、刘广永、柴攀峰、刘菲炫', '72d1aef4-9a4b-48ea-bc60-9fb0e0fa42f8', '2016-10-19 16:27:15');
-INSERT INTO `tchatgroup` VALUES ('57', '刘广永、柴攀峰、刘菲炫', '41399e4d-931b-48c5-be1c-5089b6f5a3a8', '2016-10-19 16:28:10');
-INSERT INTO `tchatgroup` VALUES ('58', '刘菲炫、刘广永、柴攀峰、刘菲炫', 'cfddc3f6-ea00-41ab-a3b7-b8013fd805a6', '2016-10-20 00:46:19');
-INSERT INTO `tchatgroup` VALUES ('59', '更改名字', '1267d142-e294-4dcb-a53c-a480fb864b54', '2016-10-20 08:52:53');
-INSERT INTO `tchatgroup` VALUES ('60', '刘菲炫、刘广永、柴攀', '8fc5818c-bad3-4a9d-9d54-1400f7bdd969', '2016-10-20 20:50:44');
-INSERT INTO `tchatgroup` VALUES ('61', '刘菲炫、刘广永、柴攀峰、刘菲炫', '74301584-dde5-4902-a338-3ae4f9feced2', '2016-10-20 08:56:21');
-INSERT INTO `tchatgroup` VALUES ('62', '怎么', '794d5870-f444-4bc8-a0e2-1486d92cc364', '2016-10-20 09:15:00');
-INSERT INTO `tchatgroup` VALUES ('63', '刘菲炫、刘广永、刘菲炫', '0837b0d5-43b0-457e-a357-82c9e5d7b552', '2016-10-20 09:03:50');
-INSERT INTO `tchatgroup` VALUES ('64', '讨论组二', 'f9d08ff1-b99f-4fab-91e5-894a17f77c2b', '2016-10-20 09:54:14');
-INSERT INTO `tchatgroup` VALUES ('65', '刘广永、柴攀峰、刘菲炫', '7caa3a1b-ceff-4eff-ae4b-85a476f1f4c7', '2016-10-20 10:05:32');
-INSERT INTO `tchatgroup` VALUES ('66', '刘广永、柴攀峰、刘菲', '1674574a-0f49-4ccf-bdc8-1227c065be6e', '2016-10-20 20:28:20');
-INSERT INTO `tchatgroup` VALUES ('67', '哥哥给哦OK了', '86d20253-6369-4084-bf42-e494d158db42', '2016-10-20 11:08:17');
-INSERT INTO `tchatgroup` VALUES ('68', '刘菲炫、刘广永、柴攀峰、刘菲炫', '451a0460-fa01-4ea6-bb9c-ce25617e87b5', '2016-10-20 14:05:50');
-INSERT INTO `tchatgroup` VALUES ('69', '刘菲炫、张一驰', '86d20253-6369-4084-bf42-e494d158db42', '2016-10-20 15:24:52');
-INSERT INTO `tchatgroup` VALUES ('70', 'zhizh', 'ecf59d9f-8514-4bca-9602-323590a41495', '2016-11-09 04:27:05');
-INSERT INTO `tchatgroup` VALUES ('71', 'zhizh', 'ecf59d9f-8514-4bca-9602-323590a41495', '2016-11-09 04:27:05');
-INSERT INTO `tchatgroup` VALUES ('72', 'zhizh', 'ecf59d9f-8514-4bca-9602-323590a41495', '2016-11-09 04:27:05');
-INSERT INTO `tchatgroup` VALUES ('73', '刘菲炫、刘广永、张一驰', 'f3a25a44-991d-44ee-b579-4b299901d1bf', '2016-10-20 15:26:27');
-INSERT INTO `tchatgroup` VALUES ('74', '刘菲炫、刘广永、张一驰', '16f2c740-d2eb-4975-8f65-f64ca1588de2', '2016-10-20 13:40:48');
-INSERT INTO `tchatgroup` VALUES ('75', '刘菲', '0f312cae-535e-4c96-bf53-386215e879e5', '2016-10-20 23:23:38');
-INSERT INTO `tchatgroup` VALUES ('76', 'gegnga', '15129c6a-2801-4cd7-98de-d045bec4f195', '2016-10-20 23:26:54');
-INSERT INTO `tchatgroup` VALUES ('100', '金jia、刘四、柴、liu', '4e483cc2-f7e3-42bb-b855-76fde107600d', '2016-11-08 06:45:04');
-INSERT INTO `tchatgroup` VALUES ('101', '皇帝、he、chaipanfen', '4450229b-8193-4876-8e51-cd2740ad32e5', '2016-11-09 03:31:46');
-INSERT INTO `tchatgroup` VALUES ('102', '皇帝、he、chaipanfen', 'cc1783ea-8bd1-4edb-b266-10077f239faf', '2016-11-09 03:39:48');
-INSERT INTO `tchatgroup` VALUES ('103', '皇帝、he、金jia、刘广永', '52049a78-35e3-4204-9e92-fc24c6719ee5', '2016-11-08 15:28:35');
-INSERT INTO `tchatgroup` VALUES ('104', '刘广永、柴、刘', '371d2cc1-9583-475b-8ba7-3c2370c11a34', '2016-11-09 05:41:03');
-INSERT INTO `tchatgroup` VALUES ('105', '刘广永、柴、金jia、刘', '7631ff46-8ef6-45d8-ba00-5d4deac2ddc4', '2017-04-16 17:24:43');
-INSERT INTO `tchatgroup` VALUES ('106', '刘广永、柴、刘', '9fedc37e-f7ec-404e-822f-860a0011a5fc', '2017-04-16 17:25:15');
+INSERT INTO `tchatgroup` VALUES ('108', '张三、刘菲炫、李四、小明', '0f787e74-8d10-48f7-b00e-8771c7ef17d7', '2017-05-30 18:06:18');
+INSERT INTO `tchatgroup` VALUES ('109', '刘菲炫、李四、小明、张三', 'ed0fc2e8-1e0b-4090-90d7-0454f225c09d', '2017-05-31 00:49:02');
 
 -- ----------------------------
 -- Table structure for tchatgrouprelation
@@ -997,65 +947,18 @@ CREATE TABLE `tchatgrouprelation` (
   KEY `tcg_id` (`tcg_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `tchatgrouprelation_ibfk_3` FOREIGN KEY (`tcg_id`) REFERENCES `tchatgroup` (`chatgroup_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=516 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=528 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tchatgrouprelation
 -- ----------------------------
-INSERT INTO `tchatgrouprelation` VALUES ('156', '190', 'ecf59d9f-8514-4bca-9602-323590a41495');
-INSERT INTO `tchatgrouprelation` VALUES ('159', '1', 'c1307035-b4cf-4135-aa3c-5a78d4676ba5');
-INSERT INTO `tchatgrouprelation` VALUES ('162', '190', 'c1307035-b4cf-4135-aa3c-5a78d4676ba5');
-INSERT INTO `tchatgrouprelation` VALUES ('165', '5', 'ecf59d9f-8514-4bca-9602-323590a41495');
-INSERT INTO `tchatgrouprelation` VALUES ('166', '120', 'ecf59d9f-8514-4bca-9602-323590a41495');
-INSERT INTO `tchatgrouprelation` VALUES ('167', '5', 'c1307035-b4cf-4135-aa3c-5a78d4676ba5');
-INSERT INTO `tchatgrouprelation` VALUES ('173', '190', 'f8eca35b-5ea5-48bc-9eb6-91ca40debd68');
-INSERT INTO `tchatgrouprelation` VALUES ('174', '5', 'f8eca35b-5ea5-48bc-9eb6-91ca40debd68');
-INSERT INTO `tchatgrouprelation` VALUES ('177', '1', 'c470ba01-fbc9-40af-9fc2-97127394ff25');
-INSERT INTO `tchatgrouprelation` VALUES ('179', '190', 'c470ba01-fbc9-40af-9fc2-97127394ff25');
-INSERT INTO `tchatgrouprelation` VALUES ('471', '120', '4e483cc2-f7e3-42bb-b855-76fde107600d');
-INSERT INTO `tchatgrouprelation` VALUES ('472', '222', '4e483cc2-f7e3-42bb-b855-76fde107600d');
-INSERT INTO `tchatgrouprelation` VALUES ('473', '18862601582', '4e483cc2-f7e3-42bb-b855-76fde107600d');
-INSERT INTO `tchatgrouprelation` VALUES ('474', '3', '4e483cc2-f7e3-42bb-b855-76fde107600d');
-INSERT INTO `tchatgrouprelation` VALUES ('475', '13196889273', '4e483cc2-f7e3-42bb-b855-76fde107600d');
-INSERT INTO `tchatgrouprelation` VALUES ('476', '13196889273', '4450229b-8193-4876-8e51-cd2740ad32e5');
-INSERT INTO `tchatgrouprelation` VALUES ('477', '18151587320', '4450229b-8193-4876-8e51-cd2740ad32e5');
-INSERT INTO `tchatgrouprelation` VALUES ('478', '2', '4450229b-8193-4876-8e51-cd2740ad32e5');
-INSERT INTO `tchatgrouprelation` VALUES ('479', '120', '4450229b-8193-4876-8e51-cd2740ad32e5');
-INSERT INTO `tchatgrouprelation` VALUES ('480', '18862601582', '4450229b-8193-4876-8e51-cd2740ad32e5');
-INSERT INTO `tchatgrouprelation` VALUES ('481', '13196889273', 'cc1783ea-8bd1-4edb-b266-10077f239faf');
-INSERT INTO `tchatgrouprelation` VALUES ('482', '18151587320', 'cc1783ea-8bd1-4edb-b266-10077f239faf');
-INSERT INTO `tchatgrouprelation` VALUES ('483', '2', 'cc1783ea-8bd1-4edb-b266-10077f239faf');
-INSERT INTO `tchatgrouprelation` VALUES ('484', '120', 'cc1783ea-8bd1-4edb-b266-10077f239faf');
-INSERT INTO `tchatgrouprelation` VALUES ('485', '18862601582', 'cc1783ea-8bd1-4edb-b266-10077f239faf');
-INSERT INTO `tchatgrouprelation` VALUES ('486', '18151587320', 'ecf59d9f-8514-4bca-9602-323590a41495');
-INSERT INTO `tchatgrouprelation` VALUES ('487', '13196889273', 'ecf59d9f-8514-4bca-9602-323590a41495');
-INSERT INTO `tchatgrouprelation` VALUES ('488', '13196889273', 'f8eca35b-5ea5-48bc-9eb6-91ca40debd68');
-INSERT INTO `tchatgrouprelation` VALUES ('489', '18151587320', 'f8eca35b-5ea5-48bc-9eb6-91ca40debd68');
-INSERT INTO `tchatgrouprelation` VALUES ('490', '120', 'f8eca35b-5ea5-48bc-9eb6-91ca40debd68');
-INSERT INTO `tchatgrouprelation` VALUES ('491', '18862601582', 'f8eca35b-5ea5-48bc-9eb6-91ca40debd68');
-INSERT INTO `tchatgrouprelation` VALUES ('492', '13196889273', '52049a78-35e3-4204-9e92-fc24c6719ee5');
-INSERT INTO `tchatgrouprelation` VALUES ('493', '18151587320', '52049a78-35e3-4204-9e92-fc24c6719ee5');
-INSERT INTO `tchatgrouprelation` VALUES ('494', '120', '52049a78-35e3-4204-9e92-fc24c6719ee5');
-INSERT INTO `tchatgrouprelation` VALUES ('495', '1', '52049a78-35e3-4204-9e92-fc24c6719ee5');
-INSERT INTO `tchatgrouprelation` VALUES ('496', '18862601582', '52049a78-35e3-4204-9e92-fc24c6719ee5');
-INSERT INTO `tchatgrouprelation` VALUES ('497', '222', '52049a78-35e3-4204-9e92-fc24c6719ee5');
-INSERT INTO `tchatgrouprelation` VALUES ('498', '18151587320', '4e483cc2-f7e3-42bb-b855-76fde107600d');
-INSERT INTO `tchatgrouprelation` VALUES ('499', '18151587320', 'c1307035-b4cf-4135-aa3c-5a78d4676ba5');
-INSERT INTO `tchatgrouprelation` VALUES ('500', '13196889273', 'c1307035-b4cf-4135-aa3c-5a78d4676ba5');
-INSERT INTO `tchatgrouprelation` VALUES ('501', '1', '371d2cc1-9583-475b-8ba7-3c2370c11a34');
-INSERT INTO `tchatgrouprelation` VALUES ('502', '18862601582', '371d2cc1-9583-475b-8ba7-3c2370c11a34');
-INSERT INTO `tchatgrouprelation` VALUES ('503', '4', '371d2cc1-9583-475b-8ba7-3c2370c11a34');
-INSERT INTO `tchatgrouprelation` VALUES ('504', '120', '371d2cc1-9583-475b-8ba7-3c2370c11a34');
-INSERT INTO `tchatgrouprelation` VALUES ('505', '190', '371d2cc1-9583-475b-8ba7-3c2370c11a34');
-INSERT INTO `tchatgrouprelation` VALUES ('506', '15751009576', '4e483cc2-f7e3-42bb-b855-76fde107600d');
-INSERT INTO `tchatgrouprelation` VALUES ('507', '5', '4e483cc2-f7e3-42bb-b855-76fde107600d');
-INSERT INTO `tchatgrouprelation` VALUES ('508', '1', '7631ff46-8ef6-45d8-ba00-5d4deac2ddc4');
-INSERT INTO `tchatgrouprelation` VALUES ('509', '18862601582', '7631ff46-8ef6-45d8-ba00-5d4deac2ddc4');
-INSERT INTO `tchatgrouprelation` VALUES ('510', '120', '7631ff46-8ef6-45d8-ba00-5d4deac2ddc4');
-INSERT INTO `tchatgrouprelation` VALUES ('512', '1', '9fedc37e-f7ec-404e-822f-860a0011a5fc');
-INSERT INTO `tchatgrouprelation` VALUES ('513', '18862601582', '9fedc37e-f7ec-404e-822f-860a0011a5fc');
-INSERT INTO `tchatgrouprelation` VALUES ('514', '4', '9fedc37e-f7ec-404e-822f-860a0011a5fc');
-INSERT INTO `tchatgrouprelation` VALUES ('515', '120', '9fedc37e-f7ec-404e-822f-860a0011a5fc');
+INSERT INTO `tchatgrouprelation` VALUES ('519', '18151587320', '0f787e74-8d10-48f7-b00e-8771c7ef17d7');
+INSERT INTO `tchatgrouprelation` VALUES ('520', '18151587321', '0f787e74-8d10-48f7-b00e-8771c7ef17d7');
+INSERT INTO `tchatgrouprelation` VALUES ('521', '18151587322', '0f787e74-8d10-48f7-b00e-8771c7ef17d7');
+INSERT INTO `tchatgrouprelation` VALUES ('523', '18151587331', 'ed0fc2e8-1e0b-4090-90d7-0454f225c09d');
+INSERT INTO `tchatgrouprelation` VALUES ('524', '18151587332', 'ed0fc2e8-1e0b-4090-90d7-0454f225c09d');
+INSERT INTO `tchatgrouprelation` VALUES ('525', '18151587334', 'ed0fc2e8-1e0b-4090-90d7-0454f225c09d');
+INSERT INTO `tchatgrouprelation` VALUES ('527', '18151587330', 'ed0fc2e8-1e0b-4090-90d7-0454f225c09d');
 
 -- ----------------------------
 -- Table structure for tcompany
@@ -1069,7 +972,7 @@ CREATE TABLE `tcompany` (
   `tc_area` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`tc_id`),
   UNIQUE KEY `tc_name` (`tc_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tcompany
@@ -1109,6 +1012,7 @@ INSERT INTO `tcompany` VALUES ('65', 'grre', '2016-11-09 02:31:56', 'greger', '�
 INSERT INTO `tcompany` VALUES ('66', 'e', '2016-11-09 03:51:06', 'rgre', '江苏-苏州');
 INSERT INTO `tcompany` VALUES ('67', 'r4r', '2016-11-09 03:54:07', '4t4', '江苏-苏州');
 INSERT INTO `tcompany` VALUES ('68', '测试公司', '2017-05-14 15:23:17', '教育', '北京市-县-密云县');
+INSERT INTO `tcompany` VALUES ('69', '南京金贝网络公司', '2017-05-30 13:43:15', '互联网', '江苏-苏州');
 
 -- ----------------------------
 -- Table structure for text
@@ -1137,9 +1041,8 @@ CREATE TABLE `tgroup` (
   PRIMARY KEY (`tg_id`),
   KEY `tc_id` (`tc_id`),
   KEY `tg_leader` (`tg_leader`),
-  CONSTRAINT `tgroup_ibfk_1` FOREIGN KEY (`tc_id`) REFERENCES `tcompany` (`tc_id`),
-  CONSTRAINT `tgroup_ibfk_2` FOREIGN KEY (`tg_leader`) REFERENCES `tusergrouprelation` (`tu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=182 DEFAULT CHARSET=utf8;
+  CONSTRAINT `tgroup_ibfk_1` FOREIGN KEY (`tc_id`) REFERENCES `tcompany` (`tc_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=194 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tgroup
@@ -1160,13 +1063,13 @@ INSERT INTO `tgroup` VALUES ('86', 'LJ\nLJ', '0', '默认', '13', null);
 INSERT INTO `tgroup` VALUES ('87', 'LJ\nLJ1', '0', '默认', '14', null);
 INSERT INTO `tgroup` VALUES ('88', '刘氏集团', '0', '默认', '15', null);
 INSERT INTO `tgroup` VALUES ('104', '22222', '113', '', '1', '1');
-INSERT INTO `tgroup` VALUES ('109', '哈哈', '88', '', '15', null);
-INSERT INTO `tgroup` VALUES ('110', '呵呵', '88', '', '15', null);
+INSERT INTO `tgroup` VALUES ('109', 'Android部', '88', '', '15', '6');
+INSERT INTO `tgroup` VALUES ('110', 'Java部', '88', '', '15', null);
 INSERT INTO `tgroup` VALUES ('111', 'hhaha', '110', '', '15', null);
 INSERT INTO `tgroup` VALUES ('112', 'text', '1', '', '1', null);
 INSERT INTO `tgroup` VALUES ('113', '3333', '112', '', '1', null);
 INSERT INTO `tgroup` VALUES ('114', '3333', '112', '', '1', null);
-INSERT INTO `tgroup` VALUES ('115', '111', '109', 'rrrrr', '15', null);
+INSERT INTO `tgroup` VALUES ('115', 'Android架构部', '109', 'rrrrr', '15', null);
 INSERT INTO `tgroup` VALUES ('116', null, '0', '默认', '16', null);
 INSERT INTO `tgroup` VALUES ('117', '222', '112', '', '1', null);
 INSERT INTO `tgroup` VALUES ('118', 'buzhidao', '0', '默认', '17', null);
@@ -1193,7 +1096,12 @@ INSERT INTO `tgroup` VALUES ('167', 'grre', '0', '默认', '65', null);
 INSERT INTO `tgroup` VALUES ('168', 'e', '0', '默认', '66', null);
 INSERT INTO `tgroup` VALUES ('169', 'r4r', '0', '默认', '67', null);
 INSERT INTO `tgroup` VALUES ('170', '测试公司', '0', '默认', '68', null);
-INSERT INTO `tgroup` VALUES ('181', '', '88', '', '15', null);
+INSERT INTO `tgroup` VALUES ('182', '南京金贝网络公司', '0', '默认', '69', '47');
+INSERT INTO `tgroup` VALUES ('183', '开发部', '182', '负责程序的运行', '69', '48');
+INSERT INTO `tgroup` VALUES ('184', 'Java开发部', '183', '', '69', '51');
+INSERT INTO `tgroup` VALUES ('191', '技术部', '183', '', '69', '0');
+INSERT INTO `tgroup` VALUES ('192', 'Android', '183', '', '69', '0');
+INSERT INTO `tgroup` VALUES ('193', '部门', '183', '', '69', '0');
 
 -- ----------------------------
 -- Table structure for tright
@@ -1272,12 +1180,12 @@ CREATE TABLE `tuser` (
   `position` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`tu_id`),
   KEY `tel` (`tel`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tuser
 -- ----------------------------
-INSERT INTO `tuser` VALUES ('1', '刘', '11', '4', 'keY/uCA587oie31peUb/Nb5QEts3ESg56W6fon4Q6qNWCShSFm5munzCccZo7M4ewGy97WDy3kaTQLXR3SXUwA==', 'emotion_001.png', '2016-10-18 12:00:00', '北京市-县-密云县', '0', 'boss');
+INSERT INTO `tuser` VALUES ('1', '刘', '11', '4', 'keY/uCA587oie31peUb/Nb5QEts3ESg56W6fon4Q6qNWCShSFm5munzCccZo7M4ewGy97WDy3kaTQLXR3SXUwA==', '20170529_230309_471884f6-0499-43b1-a61b-155283e16a8b.png', '2016-10-18 00:00:00', '北京市-县-密云县', '0', 'boss');
 INSERT INTO `tuser` VALUES ('2', '刘广永', '1', '1', 'Tfow9pnvoQp0O3w0DW3T8r0pvN45C/mHhbkqwRE514Xj/0kNkV32N5E1p7Wd5bqgG7RBmltW4bk=', 'emotion_002.png', '2016-10-11 19:03:50', null, '0', null);
 INSERT INTO `tuser` VALUES ('3', 'chaipanfen', '1', '2', 'D9mMMn37M7r/6uViQHmn5UFNk1Z/VBs0h4MxQpbm08FD2hLD2M1skK95dLjA6vLODtpu2Tgn1eE=', 'emotion_003.png', '1991-01-24 00:00:00', '江苏-苏州', '0', null);
 INSERT INTO `tuser` VALUES ('4', 'liu', '11', '3', 'zVWZnIT9y3cK8V+5jWQepUFNk1Z/VBs0h4MxQpbm08FD2hLD2M1skLp60gn14HKxWUUfSbmAEVM=', 'emotion_004.png', '1991-01-24 00:00:00', '江苏-苏州', '0', null);
@@ -1289,7 +1197,7 @@ INSERT INTO `tuser` VALUES ('9', '刘四', '111', '222', null, 'emotion_002.png'
 INSERT INTO `tuser` VALUES ('10', '张三', '2323', '333', 'COQ1V0Z7AYlIUOjOrmfCDipojLRe4fpqbbyzSmBW1SYxJX+1zXbuf9xyYHQxY3akpEetQa7QWF32Zd651W4KRQ==', 'emotion_003.png', '2016-10-12 19:04:06', null, null, null);
 INSERT INTO `tuser` VALUES ('11', '柴', '44', '18862601582', null, 'emotion_004.png', '2016-10-19 19:04:17', null, '0', null);
 INSERT INTO `tuser` VALUES ('28', '皇帝', 'qweQWE1', '13196889273', 'q0dnG4CTS9d0O3w0DW3T8r0pvN45C/mHhbkqwRE514WzP5CRjtiZ+Y1fYhB3I7Jdkf3aJhnyk7vDuWYAQpQkOOZQFmOj7CvS', 'emotion_005.png', '2016-01-01 00:00:00', '江苏省', '1', 'carry');
-INSERT INTO `tuser` VALUES ('30', 'he', 'qwe123Q', '18151587321', 'ES25M8CGzAttz3W4V1P+175QEts3ESg56W6fon4Q6qNWCShSFm5musfoUsHRezO3Km/q1pIRGUwwCAXi02kQd/rgCmYAW20v', 'emotion_006.png', '2016-01-01 00:00:00', null, '2', null);
+INSERT INTO `tuser` VALUES ('30', 'he', 'qwe123Q', '18151587329', 'ES25M8CGzAttz3W4V1P+175QEts3ESg56W6fon4Q6qNWCShSFm5musfoUsHRezO3Km/q1pIRGUwwCAXi02kQd/rgCmYAW20v', 'emotion_006.png', '2016-01-01 00:00:00', null, '2', null);
 INSERT INTO `tuser` VALUES ('31', 'dage', 'Tage123', '15751009576', 'tTvvimmV7haHaOnAWt36T75QEts3ESg56W6fon4Q6qNWCShSFm5muuBbe+wym+P4WlfcWrfsi5UP3d8ce7RYXylN59xC2QNU', 'emotion_007.png', '2016-01-01 00:00:00', null, '2', null);
 INSERT INTO `tuser` VALUES ('32', '刘菲炫', '0', '123', 'vy11GEPICD2Gkw5ZGO+pDkFNk1Z/VBs0h4MxQpbm08EUBrHWiQWL8sq6esN+qIyx9zmY4qKbGeM=', 'emotion_001.png', '2016-01-01 00:00:00', null, '2', null);
 INSERT INTO `tuser` VALUES ('33', 'gay', '9', '9', null, 'emotion_002.png', '2016-01-01 00:00:00', null, '2', null);
@@ -1306,7 +1214,11 @@ INSERT INTO `tuser` VALUES ('43', '344', '344', '344', null, null, '2016-01-01 0
 INSERT INTO `tuser` VALUES ('44', '345', '345', '345', null, null, '2016-01-01 00:00:00', null, '2', null);
 INSERT INTO `tuser` VALUES ('45', '400', '400', '400', null, null, '2016-01-01 00:00:00', null, '2', null);
 INSERT INTO `tuser` VALUES ('46', '401', '401', '401', null, null, '2016-01-01 00:00:00', null, '2', null);
-INSERT INTO `tuser` VALUES ('47', '18151587320', 'LHXlove520', '18151587320', 'tC+15qYU4u4yuINw1U2+G75QEts3ESg56W6fon4Q6qNXmVyPd4PE0AhdpmzYWosfkyCemCfktFswCAXi02kQd/rgCmYAW20v', 'http://www.rongcloud.cn/images/logo.png', '2016-01-01 00:00:00', null, '2', null);
+INSERT INTO `tuser` VALUES ('47', '张三', '123', '18151587330', 'udQdistC/9b/atQYkRb2Gr5QEts3ESg56W6fon4Q6qNKXmoZWEaBfUXJjb6XrWG+ZtnJG8iZ/hMwCAXi02kQd40mLTjFiPVT', 'emotion_002.png', '2016-01-01 12:00:00', '北京市-县-密云县', '0', null);
+INSERT INTO `tuser` VALUES ('48', '刘菲炫', '123', '18151587331', '9nOnwT2QMZJh63Y+GN0oIL5QEts3ESg56W6fon4Q6qNKXmoZWEaBfS+PJZQGaWWCZDd60MbGKGEwCAXi02kQd3BICoOWwEVr', 'emotion_003.png', '2016-01-01 12:00:00', null, '2', null);
+INSERT INTO `tuser` VALUES ('49', '李四', '123', '18151587332', 'kcKLdYp0GMUHfkgjjiGDyCpojLRe4fpqbbyzSmBW1SbwAXTtA+B8Nh+zKEasLMkEQBibCDUePqdL5Jiu4ANGxvehtu3x2NXY', 'emotion_007.png', '2016-01-01 12:00:00', null, '2', null);
+INSERT INTO `tuser` VALUES ('50', '王五', '123', '18151587333', 'BVh9syAAie/I3Nd7DvoxDr5QEts3ESg56W6fon4Q6qNKXmoZWEaBfSF4uqa6DNhDVA7/1BMVh/owCAXi02kQd6097XzXHWiB', 'emotion_006.png', '2016-01-01 00:00:00', null, '2', null);
+INSERT INTO `tuser` VALUES ('51', '小明', '123', '18151587334', 'prMSVbye+f//qLUbrpXuTipojLRe4fpqbbyzSmBW1SbwAXTtA+B8Nqjm5gAj8YxFRTVOcERXh0VL5Jiu4ANGxv8i2K8f3uRf', 'emotion_003.png', '2016-01-01 12:00:00', null, '2', null);
 
 -- ----------------------------
 -- Table structure for tusergrouprelation
@@ -1318,10 +1230,8 @@ CREATE TABLE `tusergrouprelation` (
   `tg_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`tug_id`),
   KEY `tu_id` (`tu_id`),
-  KEY `tg_id` (`tg_id`),
-  CONSTRAINT `tusergrouprelation_ibfk_1` FOREIGN KEY (`tu_id`) REFERENCES `tuser` (`tu_id`),
-  CONSTRAINT `tusergrouprelation_ibfk_2` FOREIGN KEY (`tg_id`) REFERENCES `tgroup` (`tg_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=192 DEFAULT CHARSET=utf8;
+  KEY `tg_id` (`tg_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=197 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tusergrouprelation
@@ -1338,7 +1248,6 @@ INSERT INTO `tusergrouprelation` VALUES ('82', '30', '1');
 INSERT INTO `tusergrouprelation` VALUES ('85', '3', '104');
 INSERT INTO `tusergrouprelation` VALUES ('86', '1', '110');
 INSERT INTO `tusergrouprelation` VALUES ('93', '1', '110');
-INSERT INTO `tusergrouprelation` VALUES ('94', '8', '112');
 INSERT INTO `tusergrouprelation` VALUES ('101', '9', '1');
 INSERT INTO `tusergrouprelation` VALUES ('104', '31', '1');
 INSERT INTO `tusergrouprelation` VALUES ('142', '40', '158');
@@ -1351,7 +1260,11 @@ INSERT INTO `tusergrouprelation` VALUES ('152', '34', '168');
 INSERT INTO `tusergrouprelation` VALUES ('153', '45', '169');
 INSERT INTO `tusergrouprelation` VALUES ('154', '2', '111');
 INSERT INTO `tusergrouprelation` VALUES ('190', '6', '109');
-INSERT INTO `tusergrouprelation` VALUES ('191', '8', '88');
+INSERT INTO `tusergrouprelation` VALUES ('192', '47', '183');
+INSERT INTO `tusergrouprelation` VALUES ('193', '48', '183');
+INSERT INTO `tusergrouprelation` VALUES ('194', '49', '193');
+INSERT INTO `tusergrouprelation` VALUES ('195', '51', '192');
+INSERT INTO `tusergrouprelation` VALUES ('196', '50', '193');
 
 -- ----------------------------
 -- Table structure for tuserrolerelation
@@ -1366,7 +1279,7 @@ CREATE TABLE `tuserrolerelation` (
   KEY `tr_id` (`tr_id`),
   CONSTRAINT `tuserrolerelation_ibfk_1` FOREIGN KEY (`tu_id`) REFERENCES `tuser` (`tu_id`),
   CONSTRAINT `tuserrolerelation_ibfk_2` FOREIGN KEY (`tr_id`) REFERENCES `trole` (`tr_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tuserrolerelation
@@ -1386,6 +1299,7 @@ INSERT INTO `tuserrolerelation` VALUES ('48', '47', '1');
 INSERT INTO `tuserrolerelation` VALUES ('49', '47', '1');
 INSERT INTO `tuserrolerelation` VALUES ('50', '47', '1');
 INSERT INTO `tuserrolerelation` VALUES ('51', '47', '1');
+INSERT INTO `tuserrolerelation` VALUES ('52', '47', '1');
 
 -- ----------------------------
 -- Table structure for workday
@@ -1396,7 +1310,7 @@ CREATE TABLE `workday` (
   `workdayDate` date NOT NULL,
   `companyId` bigint(20) NOT NULL,
   PRIMARY KEY (`workdayId`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=608 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of workday
@@ -1457,6 +1371,343 @@ INSERT INTO `workday` VALUES ('53', '2016-11-03', '1');
 INSERT INTO `workday` VALUES ('54', '2016-11-04', '1');
 INSERT INTO `workday` VALUES ('55', '2016-11-05', '1');
 INSERT INTO `workday` VALUES ('56', '2016-11-06', '1');
+INSERT INTO `workday` VALUES ('87', '2017-05-31', '15');
+INSERT INTO `workday` VALUES ('88', '2017-06-01', '15');
+INSERT INTO `workday` VALUES ('89', '2017-06-02', '15');
+INSERT INTO `workday` VALUES ('90', '2017-06-03', '15');
+INSERT INTO `workday` VALUES ('91', '2017-06-05', '15');
+INSERT INTO `workday` VALUES ('92', '2017-06-06', '15');
+INSERT INTO `workday` VALUES ('93', '2017-06-07', '15');
+INSERT INTO `workday` VALUES ('94', '2017-06-08', '15');
+INSERT INTO `workday` VALUES ('95', '2017-06-09', '15');
+INSERT INTO `workday` VALUES ('96', '2017-06-10', '15');
+INSERT INTO `workday` VALUES ('97', '2017-06-12', '15');
+INSERT INTO `workday` VALUES ('98', '2017-06-13', '15');
+INSERT INTO `workday` VALUES ('99', '2017-06-14', '15');
+INSERT INTO `workday` VALUES ('100', '2017-06-15', '15');
+INSERT INTO `workday` VALUES ('101', '2017-06-16', '15');
+INSERT INTO `workday` VALUES ('102', '2017-06-17', '15');
+INSERT INTO `workday` VALUES ('103', '2017-06-19', '15');
+INSERT INTO `workday` VALUES ('104', '2017-06-20', '15');
+INSERT INTO `workday` VALUES ('105', '2017-06-21', '15');
+INSERT INTO `workday` VALUES ('106', '2017-06-22', '15');
+INSERT INTO `workday` VALUES ('107', '2017-06-23', '15');
+INSERT INTO `workday` VALUES ('108', '2017-06-24', '15');
+INSERT INTO `workday` VALUES ('109', '2017-06-26', '15');
+INSERT INTO `workday` VALUES ('110', '2017-06-27', '15');
+INSERT INTO `workday` VALUES ('111', '2017-06-28', '15');
+INSERT INTO `workday` VALUES ('112', '2017-06-29', '15');
+INSERT INTO `workday` VALUES ('113', '2017-06-30', '15');
+INSERT INTO `workday` VALUES ('114', '2017-07-01', '15');
+INSERT INTO `workday` VALUES ('115', '2017-07-03', '15');
+INSERT INTO `workday` VALUES ('116', '2017-07-04', '15');
+INSERT INTO `workday` VALUES ('117', '2017-07-05', '15');
+INSERT INTO `workday` VALUES ('118', '2017-07-06', '15');
+INSERT INTO `workday` VALUES ('119', '2017-07-07', '15');
+INSERT INTO `workday` VALUES ('120', '2017-07-08', '15');
+INSERT INTO `workday` VALUES ('121', '2017-07-10', '15');
+INSERT INTO `workday` VALUES ('122', '2017-07-11', '15');
+INSERT INTO `workday` VALUES ('123', '2017-07-12', '15');
+INSERT INTO `workday` VALUES ('124', '2017-07-13', '15');
+INSERT INTO `workday` VALUES ('125', '2017-07-14', '15');
+INSERT INTO `workday` VALUES ('126', '2017-07-15', '15');
+INSERT INTO `workday` VALUES ('127', '2017-07-17', '15');
+INSERT INTO `workday` VALUES ('128', '2017-07-18', '15');
+INSERT INTO `workday` VALUES ('129', '2017-07-19', '15');
+INSERT INTO `workday` VALUES ('130', '2017-07-20', '15');
+INSERT INTO `workday` VALUES ('131', '2017-07-21', '15');
+INSERT INTO `workday` VALUES ('132', '2017-07-22', '15');
+INSERT INTO `workday` VALUES ('133', '2017-07-24', '15');
+INSERT INTO `workday` VALUES ('134', '2017-07-25', '15');
+INSERT INTO `workday` VALUES ('135', '2017-07-26', '15');
+INSERT INTO `workday` VALUES ('136', '2017-07-27', '15');
+INSERT INTO `workday` VALUES ('137', '2017-07-28', '15');
+INSERT INTO `workday` VALUES ('138', '2017-07-29', '15');
+INSERT INTO `workday` VALUES ('139', '2017-07-31', '15');
+INSERT INTO `workday` VALUES ('140', '2017-08-01', '15');
+INSERT INTO `workday` VALUES ('141', '2017-08-02', '15');
+INSERT INTO `workday` VALUES ('142', '2017-08-03', '15');
+INSERT INTO `workday` VALUES ('143', '2017-08-04', '15');
+INSERT INTO `workday` VALUES ('144', '2017-08-05', '15');
+INSERT INTO `workday` VALUES ('145', '2017-08-07', '15');
+INSERT INTO `workday` VALUES ('146', '2017-08-08', '15');
+INSERT INTO `workday` VALUES ('147', '2017-08-09', '15');
+INSERT INTO `workday` VALUES ('148', '2017-08-10', '15');
+INSERT INTO `workday` VALUES ('149', '2017-08-11', '15');
+INSERT INTO `workday` VALUES ('150', '2017-08-12', '15');
+INSERT INTO `workday` VALUES ('151', '2017-08-14', '15');
+INSERT INTO `workday` VALUES ('152', '2017-08-15', '15');
+INSERT INTO `workday` VALUES ('153', '2017-08-16', '15');
+INSERT INTO `workday` VALUES ('154', '2017-08-17', '15');
+INSERT INTO `workday` VALUES ('155', '2017-08-18', '15');
+INSERT INTO `workday` VALUES ('156', '2017-08-19', '15');
+INSERT INTO `workday` VALUES ('157', '2017-08-21', '15');
+INSERT INTO `workday` VALUES ('158', '2017-08-22', '15');
+INSERT INTO `workday` VALUES ('159', '2017-08-23', '15');
+INSERT INTO `workday` VALUES ('160', '2017-08-24', '15');
+INSERT INTO `workday` VALUES ('161', '2017-08-25', '15');
+INSERT INTO `workday` VALUES ('162', '2017-08-26', '15');
+INSERT INTO `workday` VALUES ('163', '2017-08-28', '15');
+INSERT INTO `workday` VALUES ('164', '2017-08-29', '15');
+INSERT INTO `workday` VALUES ('165', '2017-08-30', '15');
+INSERT INTO `workday` VALUES ('166', '2017-08-31', '15');
+INSERT INTO `workday` VALUES ('167', '2017-09-01', '15');
+INSERT INTO `workday` VALUES ('168', '2017-09-02', '15');
+INSERT INTO `workday` VALUES ('169', '2017-09-04', '15');
+INSERT INTO `workday` VALUES ('170', '2017-09-05', '15');
+INSERT INTO `workday` VALUES ('171', '2017-09-06', '15');
+INSERT INTO `workday` VALUES ('172', '2017-09-07', '15');
+INSERT INTO `workday` VALUES ('173', '2017-09-08', '15');
+INSERT INTO `workday` VALUES ('174', '2017-09-09', '15');
+INSERT INTO `workday` VALUES ('175', '2017-09-11', '15');
+INSERT INTO `workday` VALUES ('176', '2017-09-12', '15');
+INSERT INTO `workday` VALUES ('177', '2017-09-13', '15');
+INSERT INTO `workday` VALUES ('178', '2017-09-14', '15');
+INSERT INTO `workday` VALUES ('179', '2017-09-15', '15');
+INSERT INTO `workday` VALUES ('180', '2017-09-16', '15');
+INSERT INTO `workday` VALUES ('181', '2017-09-18', '15');
+INSERT INTO `workday` VALUES ('182', '2017-09-19', '15');
+INSERT INTO `workday` VALUES ('183', '2017-09-20', '15');
+INSERT INTO `workday` VALUES ('184', '2017-09-21', '15');
+INSERT INTO `workday` VALUES ('185', '2017-09-22', '15');
+INSERT INTO `workday` VALUES ('186', '2017-09-23', '15');
+INSERT INTO `workday` VALUES ('187', '2017-09-25', '15');
+INSERT INTO `workday` VALUES ('188', '2017-09-26', '15');
+INSERT INTO `workday` VALUES ('189', '2017-09-27', '15');
+INSERT INTO `workday` VALUES ('190', '2017-09-28', '15');
+INSERT INTO `workday` VALUES ('191', '2017-09-29', '15');
+INSERT INTO `workday` VALUES ('192', '2017-09-30', '15');
+INSERT INTO `workday` VALUES ('193', '2017-10-02', '15');
+INSERT INTO `workday` VALUES ('194', '2017-10-03', '15');
+INSERT INTO `workday` VALUES ('195', '2017-10-04', '15');
+INSERT INTO `workday` VALUES ('196', '2017-10-05', '15');
+INSERT INTO `workday` VALUES ('197', '2017-10-06', '15');
+INSERT INTO `workday` VALUES ('198', '2017-10-07', '15');
+INSERT INTO `workday` VALUES ('199', '2017-10-09', '15');
+INSERT INTO `workday` VALUES ('200', '2017-10-10', '15');
+INSERT INTO `workday` VALUES ('201', '2017-10-11', '15');
+INSERT INTO `workday` VALUES ('202', '2017-10-12', '15');
+INSERT INTO `workday` VALUES ('203', '2017-10-13', '15');
+INSERT INTO `workday` VALUES ('204', '2017-10-14', '15');
+INSERT INTO `workday` VALUES ('205', '2017-10-16', '15');
+INSERT INTO `workday` VALUES ('206', '2017-10-17', '15');
+INSERT INTO `workday` VALUES ('207', '2017-10-18', '15');
+INSERT INTO `workday` VALUES ('208', '2017-10-19', '15');
+INSERT INTO `workday` VALUES ('209', '2017-10-20', '15');
+INSERT INTO `workday` VALUES ('210', '2017-10-21', '15');
+INSERT INTO `workday` VALUES ('211', '2017-10-23', '15');
+INSERT INTO `workday` VALUES ('212', '2017-10-24', '15');
+INSERT INTO `workday` VALUES ('213', '2017-10-25', '15');
+INSERT INTO `workday` VALUES ('214', '2017-10-26', '15');
+INSERT INTO `workday` VALUES ('215', '2017-10-27', '15');
+INSERT INTO `workday` VALUES ('216', '2017-10-28', '15');
+INSERT INTO `workday` VALUES ('217', '2017-10-30', '15');
+INSERT INTO `workday` VALUES ('218', '2017-10-31', '15');
+INSERT INTO `workday` VALUES ('219', '2017-11-01', '15');
+INSERT INTO `workday` VALUES ('220', '2017-11-02', '15');
+INSERT INTO `workday` VALUES ('221', '2017-11-03', '15');
+INSERT INTO `workday` VALUES ('222', '2017-11-04', '15');
+INSERT INTO `workday` VALUES ('223', '2017-11-06', '15');
+INSERT INTO `workday` VALUES ('224', '2017-11-07', '15');
+INSERT INTO `workday` VALUES ('225', '2017-11-08', '15');
+INSERT INTO `workday` VALUES ('226', '2017-11-09', '15');
+INSERT INTO `workday` VALUES ('227', '2017-11-10', '15');
+INSERT INTO `workday` VALUES ('228', '2017-11-11', '15');
+INSERT INTO `workday` VALUES ('229', '2017-11-13', '15');
+INSERT INTO `workday` VALUES ('230', '2017-11-14', '15');
+INSERT INTO `workday` VALUES ('231', '2017-11-15', '15');
+INSERT INTO `workday` VALUES ('232', '2017-11-16', '15');
+INSERT INTO `workday` VALUES ('233', '2017-11-17', '15');
+INSERT INTO `workday` VALUES ('234', '2017-11-18', '15');
+INSERT INTO `workday` VALUES ('235', '2017-11-20', '15');
+INSERT INTO `workday` VALUES ('236', '2017-11-21', '15');
+INSERT INTO `workday` VALUES ('237', '2017-11-22', '15');
+INSERT INTO `workday` VALUES ('238', '2017-11-23', '15');
+INSERT INTO `workday` VALUES ('239', '2017-11-24', '15');
+INSERT INTO `workday` VALUES ('240', '2017-11-25', '15');
+INSERT INTO `workday` VALUES ('241', '2017-11-27', '15');
+INSERT INTO `workday` VALUES ('242', '2017-11-28', '15');
+INSERT INTO `workday` VALUES ('243', '2017-11-29', '15');
+INSERT INTO `workday` VALUES ('244', '2017-11-30', '15');
+INSERT INTO `workday` VALUES ('245', '2017-12-01', '15');
+INSERT INTO `workday` VALUES ('246', '2017-12-02', '15');
+INSERT INTO `workday` VALUES ('247', '2017-12-04', '15');
+INSERT INTO `workday` VALUES ('248', '2017-12-05', '15');
+INSERT INTO `workday` VALUES ('249', '2017-12-06', '15');
+INSERT INTO `workday` VALUES ('250', '2017-12-07', '15');
+INSERT INTO `workday` VALUES ('251', '2017-12-08', '15');
+INSERT INTO `workday` VALUES ('252', '2017-12-09', '15');
+INSERT INTO `workday` VALUES ('253', '2017-12-11', '15');
+INSERT INTO `workday` VALUES ('254', '2017-12-12', '15');
+INSERT INTO `workday` VALUES ('255', '2017-12-13', '15');
+INSERT INTO `workday` VALUES ('256', '2017-12-14', '15');
+INSERT INTO `workday` VALUES ('257', '2017-12-15', '15');
+INSERT INTO `workday` VALUES ('258', '2017-12-16', '15');
+INSERT INTO `workday` VALUES ('259', '2017-12-18', '15');
+INSERT INTO `workday` VALUES ('260', '2017-12-19', '15');
+INSERT INTO `workday` VALUES ('261', '2017-12-20', '15');
+INSERT INTO `workday` VALUES ('262', '2017-12-21', '15');
+INSERT INTO `workday` VALUES ('263', '2017-12-22', '15');
+INSERT INTO `workday` VALUES ('264', '2017-12-23', '15');
+INSERT INTO `workday` VALUES ('265', '2017-12-25', '15');
+INSERT INTO `workday` VALUES ('266', '2017-12-26', '15');
+INSERT INTO `workday` VALUES ('267', '2017-12-27', '15');
+INSERT INTO `workday` VALUES ('268', '2017-12-28', '15');
+INSERT INTO `workday` VALUES ('269', '2017-12-29', '15');
+INSERT INTO `workday` VALUES ('270', '2017-12-30', '15');
+INSERT INTO `workday` VALUES ('455', '2017-05-31', '69');
+INSERT INTO `workday` VALUES ('456', '2017-06-01', '69');
+INSERT INTO `workday` VALUES ('457', '2017-06-02', '69');
+INSERT INTO `workday` VALUES ('458', '2017-06-05', '69');
+INSERT INTO `workday` VALUES ('459', '2017-06-06', '69');
+INSERT INTO `workday` VALUES ('460', '2017-06-07', '69');
+INSERT INTO `workday` VALUES ('461', '2017-06-08', '69');
+INSERT INTO `workday` VALUES ('462', '2017-06-09', '69');
+INSERT INTO `workday` VALUES ('463', '2017-06-12', '69');
+INSERT INTO `workday` VALUES ('464', '2017-06-13', '69');
+INSERT INTO `workday` VALUES ('465', '2017-06-14', '69');
+INSERT INTO `workday` VALUES ('466', '2017-06-15', '69');
+INSERT INTO `workday` VALUES ('467', '2017-06-16', '69');
+INSERT INTO `workday` VALUES ('468', '2017-06-19', '69');
+INSERT INTO `workday` VALUES ('469', '2017-06-20', '69');
+INSERT INTO `workday` VALUES ('470', '2017-06-21', '69');
+INSERT INTO `workday` VALUES ('471', '2017-06-22', '69');
+INSERT INTO `workday` VALUES ('472', '2017-06-23', '69');
+INSERT INTO `workday` VALUES ('473', '2017-06-26', '69');
+INSERT INTO `workday` VALUES ('474', '2017-06-27', '69');
+INSERT INTO `workday` VALUES ('475', '2017-06-28', '69');
+INSERT INTO `workday` VALUES ('476', '2017-06-29', '69');
+INSERT INTO `workday` VALUES ('477', '2017-06-30', '69');
+INSERT INTO `workday` VALUES ('478', '2017-07-03', '69');
+INSERT INTO `workday` VALUES ('479', '2017-07-04', '69');
+INSERT INTO `workday` VALUES ('480', '2017-07-05', '69');
+INSERT INTO `workday` VALUES ('481', '2017-07-06', '69');
+INSERT INTO `workday` VALUES ('482', '2017-07-07', '69');
+INSERT INTO `workday` VALUES ('483', '2017-07-10', '69');
+INSERT INTO `workday` VALUES ('484', '2017-07-11', '69');
+INSERT INTO `workday` VALUES ('485', '2017-07-12', '69');
+INSERT INTO `workday` VALUES ('486', '2017-07-13', '69');
+INSERT INTO `workday` VALUES ('487', '2017-07-14', '69');
+INSERT INTO `workday` VALUES ('488', '2017-07-17', '69');
+INSERT INTO `workday` VALUES ('489', '2017-07-18', '69');
+INSERT INTO `workday` VALUES ('490', '2017-07-19', '69');
+INSERT INTO `workday` VALUES ('491', '2017-07-20', '69');
+INSERT INTO `workday` VALUES ('492', '2017-07-21', '69');
+INSERT INTO `workday` VALUES ('493', '2017-07-24', '69');
+INSERT INTO `workday` VALUES ('494', '2017-07-25', '69');
+INSERT INTO `workday` VALUES ('495', '2017-07-26', '69');
+INSERT INTO `workday` VALUES ('496', '2017-07-27', '69');
+INSERT INTO `workday` VALUES ('497', '2017-07-28', '69');
+INSERT INTO `workday` VALUES ('498', '2017-07-31', '69');
+INSERT INTO `workday` VALUES ('499', '2017-08-01', '69');
+INSERT INTO `workday` VALUES ('500', '2017-08-02', '69');
+INSERT INTO `workday` VALUES ('501', '2017-08-03', '69');
+INSERT INTO `workday` VALUES ('502', '2017-08-04', '69');
+INSERT INTO `workday` VALUES ('503', '2017-08-07', '69');
+INSERT INTO `workday` VALUES ('504', '2017-08-08', '69');
+INSERT INTO `workday` VALUES ('505', '2017-08-09', '69');
+INSERT INTO `workday` VALUES ('506', '2017-08-10', '69');
+INSERT INTO `workday` VALUES ('507', '2017-08-11', '69');
+INSERT INTO `workday` VALUES ('508', '2017-08-14', '69');
+INSERT INTO `workday` VALUES ('509', '2017-08-15', '69');
+INSERT INTO `workday` VALUES ('510', '2017-08-16', '69');
+INSERT INTO `workday` VALUES ('511', '2017-08-17', '69');
+INSERT INTO `workday` VALUES ('512', '2017-08-18', '69');
+INSERT INTO `workday` VALUES ('513', '2017-08-21', '69');
+INSERT INTO `workday` VALUES ('514', '2017-08-22', '69');
+INSERT INTO `workday` VALUES ('515', '2017-08-23', '69');
+INSERT INTO `workday` VALUES ('516', '2017-08-24', '69');
+INSERT INTO `workday` VALUES ('517', '2017-08-25', '69');
+INSERT INTO `workday` VALUES ('518', '2017-08-28', '69');
+INSERT INTO `workday` VALUES ('519', '2017-08-29', '69');
+INSERT INTO `workday` VALUES ('520', '2017-08-30', '69');
+INSERT INTO `workday` VALUES ('521', '2017-08-31', '69');
+INSERT INTO `workday` VALUES ('522', '2017-09-01', '69');
+INSERT INTO `workday` VALUES ('523', '2017-09-04', '69');
+INSERT INTO `workday` VALUES ('524', '2017-09-05', '69');
+INSERT INTO `workday` VALUES ('525', '2017-09-06', '69');
+INSERT INTO `workday` VALUES ('526', '2017-09-07', '69');
+INSERT INTO `workday` VALUES ('527', '2017-09-08', '69');
+INSERT INTO `workday` VALUES ('528', '2017-09-11', '69');
+INSERT INTO `workday` VALUES ('529', '2017-09-12', '69');
+INSERT INTO `workday` VALUES ('530', '2017-09-13', '69');
+INSERT INTO `workday` VALUES ('531', '2017-09-14', '69');
+INSERT INTO `workday` VALUES ('532', '2017-09-15', '69');
+INSERT INTO `workday` VALUES ('533', '2017-09-18', '69');
+INSERT INTO `workday` VALUES ('534', '2017-09-19', '69');
+INSERT INTO `workday` VALUES ('535', '2017-09-20', '69');
+INSERT INTO `workday` VALUES ('536', '2017-09-21', '69');
+INSERT INTO `workday` VALUES ('537', '2017-09-22', '69');
+INSERT INTO `workday` VALUES ('538', '2017-09-25', '69');
+INSERT INTO `workday` VALUES ('539', '2017-09-26', '69');
+INSERT INTO `workday` VALUES ('540', '2017-09-27', '69');
+INSERT INTO `workday` VALUES ('541', '2017-09-28', '69');
+INSERT INTO `workday` VALUES ('542', '2017-09-29', '69');
+INSERT INTO `workday` VALUES ('543', '2017-10-02', '69');
+INSERT INTO `workday` VALUES ('544', '2017-10-03', '69');
+INSERT INTO `workday` VALUES ('545', '2017-10-04', '69');
+INSERT INTO `workday` VALUES ('546', '2017-10-05', '69');
+INSERT INTO `workday` VALUES ('547', '2017-10-06', '69');
+INSERT INTO `workday` VALUES ('548', '2017-10-09', '69');
+INSERT INTO `workday` VALUES ('549', '2017-10-10', '69');
+INSERT INTO `workday` VALUES ('550', '2017-10-11', '69');
+INSERT INTO `workday` VALUES ('551', '2017-10-12', '69');
+INSERT INTO `workday` VALUES ('552', '2017-10-13', '69');
+INSERT INTO `workday` VALUES ('553', '2017-10-16', '69');
+INSERT INTO `workday` VALUES ('554', '2017-10-17', '69');
+INSERT INTO `workday` VALUES ('555', '2017-10-18', '69');
+INSERT INTO `workday` VALUES ('556', '2017-10-19', '69');
+INSERT INTO `workday` VALUES ('557', '2017-10-20', '69');
+INSERT INTO `workday` VALUES ('558', '2017-10-23', '69');
+INSERT INTO `workday` VALUES ('559', '2017-10-24', '69');
+INSERT INTO `workday` VALUES ('560', '2017-10-25', '69');
+INSERT INTO `workday` VALUES ('561', '2017-10-26', '69');
+INSERT INTO `workday` VALUES ('562', '2017-10-27', '69');
+INSERT INTO `workday` VALUES ('563', '2017-10-30', '69');
+INSERT INTO `workday` VALUES ('564', '2017-10-31', '69');
+INSERT INTO `workday` VALUES ('565', '2017-11-01', '69');
+INSERT INTO `workday` VALUES ('566', '2017-11-02', '69');
+INSERT INTO `workday` VALUES ('567', '2017-11-03', '69');
+INSERT INTO `workday` VALUES ('568', '2017-11-06', '69');
+INSERT INTO `workday` VALUES ('569', '2017-11-07', '69');
+INSERT INTO `workday` VALUES ('570', '2017-11-08', '69');
+INSERT INTO `workday` VALUES ('571', '2017-11-09', '69');
+INSERT INTO `workday` VALUES ('572', '2017-11-10', '69');
+INSERT INTO `workday` VALUES ('573', '2017-11-13', '69');
+INSERT INTO `workday` VALUES ('574', '2017-11-14', '69');
+INSERT INTO `workday` VALUES ('575', '2017-11-15', '69');
+INSERT INTO `workday` VALUES ('576', '2017-11-16', '69');
+INSERT INTO `workday` VALUES ('577', '2017-11-17', '69');
+INSERT INTO `workday` VALUES ('578', '2017-11-20', '69');
+INSERT INTO `workday` VALUES ('579', '2017-11-21', '69');
+INSERT INTO `workday` VALUES ('580', '2017-11-22', '69');
+INSERT INTO `workday` VALUES ('581', '2017-11-23', '69');
+INSERT INTO `workday` VALUES ('582', '2017-11-24', '69');
+INSERT INTO `workday` VALUES ('583', '2017-11-27', '69');
+INSERT INTO `workday` VALUES ('584', '2017-11-28', '69');
+INSERT INTO `workday` VALUES ('585', '2017-11-29', '69');
+INSERT INTO `workday` VALUES ('586', '2017-11-30', '69');
+INSERT INTO `workday` VALUES ('587', '2017-12-01', '69');
+INSERT INTO `workday` VALUES ('588', '2017-12-04', '69');
+INSERT INTO `workday` VALUES ('589', '2017-12-05', '69');
+INSERT INTO `workday` VALUES ('590', '2017-12-06', '69');
+INSERT INTO `workday` VALUES ('591', '2017-12-07', '69');
+INSERT INTO `workday` VALUES ('592', '2017-12-08', '69');
+INSERT INTO `workday` VALUES ('593', '2017-12-11', '69');
+INSERT INTO `workday` VALUES ('594', '2017-12-12', '69');
+INSERT INTO `workday` VALUES ('595', '2017-12-13', '69');
+INSERT INTO `workday` VALUES ('596', '2017-12-14', '69');
+INSERT INTO `workday` VALUES ('597', '2017-12-15', '69');
+INSERT INTO `workday` VALUES ('598', '2017-12-18', '69');
+INSERT INTO `workday` VALUES ('599', '2017-12-19', '69');
+INSERT INTO `workday` VALUES ('600', '2017-12-20', '69');
+INSERT INTO `workday` VALUES ('601', '2017-12-21', '69');
+INSERT INTO `workday` VALUES ('602', '2017-12-22', '69');
+INSERT INTO `workday` VALUES ('603', '2017-12-25', '69');
+INSERT INTO `workday` VALUES ('604', '2017-12-26', '69');
+INSERT INTO `workday` VALUES ('605', '2017-12-27', '69');
+INSERT INTO `workday` VALUES ('606', '2017-12-28', '69');
+INSERT INTO `workday` VALUES ('607', '2017-12-29', '69');
 
 -- ----------------------------
 -- Procedure structure for changeUserGroup

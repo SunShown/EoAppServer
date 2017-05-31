@@ -35,7 +35,7 @@ public class QuerySignStatus extends HttpServlet {
 		int signOffEarlyCount = iSignSettingInfoService.querySignOffEarlyStatus(companyId,dateString);
 		int signInAskforleaveCount = iSignSettingInfoService.querySignInAskforleave(companyId,dateString);
 		int signInOnBusinessCount = iSignSettingInfoService.querySignInOnBusiness(companyId,dateString);
-		
+		System.out.println(totalCount + " "+signInNormalCount+" "+signInAskforleaveCount);
 		countLists = new ArrayList<Integer>();
 		countLists.add(totalCount);
 		countLists.add(signInNormalCount);    //状态应该为1

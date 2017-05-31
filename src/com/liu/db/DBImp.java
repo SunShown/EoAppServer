@@ -495,7 +495,7 @@ public class DBImp implements IDB {
 	}
 
 	public Long addGroup(Group group) {
-		String sql = "INSERT  INTO tgroup(group_name,parent_tg_id,description,tc_id) VALUES(?,?,?,?)";
+		String sql = "INSERT  INTO tgroup(group_name,parent_tg_id,description,tc_id,tg_leader) VALUES(?,?,?,?,?)";
 		Connection conn = DbPool.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -506,6 +506,7 @@ public class DBImp implements IDB {
 			pstmt.setLong(2, group.getParentTgId());
 			pstmt.setString(3, group.getDescription());
 			pstmt.setLong(4, group.getTcId());
+			pstmt.setLong(5, group.getTgLeaderId());
 			pstmt.executeUpdate();
 			rs = pstmt.getGeneratedKeys();// 返回自增字段
 			if (rs.next()) {

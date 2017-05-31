@@ -34,7 +34,7 @@ public  List<AllShenPiBean> GetAllShenPiipreview (int userId,String searchinfo,i
 		Connection conn = DbPool.getConnection();
 		PreparedStatement stmt =null;
 		ResultSet rs=null;
-		User newgetter=null;
+		User newgetter= new User();
 		String sql="select approveId ,approvetype,approvetitle,newTime,state,ispass FROM approve where approver=?  ";
 		if(searchinfo!=null&&!("".equals(searchinfo))){
 			sql+=" and approvetitle like '%"+searchinfo+"%'";
@@ -53,16 +53,18 @@ public  List<AllShenPiBean> GetAllShenPiipreview (int userId,String searchinfo,i
 				int approveId=rs.getInt("approveId");
 				int approvetype=rs.getInt("approvetype");
 				String approvetitle=rs.getString("approvetitle");
-			Timestamp newTime=rs.getTimestamp("newTime");
-			int i=rs.getInt("state");
-			int c=rs.getInt("ispass");
-			String state=statestrDao.getApprovestatestrbyid(i);
+				Timestamp newTime=rs.getTimestamp("newTime");
+				int i=rs.getInt("state");
+				int c=rs.getInt("ispass");
+				String state=statestrDao.getApprovestatestrbyid(i);
 		
-			String ispass=ispassDao.getApproveispassstrbyid(c);
+				String ispass=ispassDao.getApproveispassstrbyid(c);
 			if (i==0){
 				List<Object> lists1=basedao.queryBySql("SELECT * from tuser where tu_id=(select applicantId from  approvestate where approveId="+approveId+" and isnew=1 )", User.class);
-			
-				newgetter=(User) lists1.get(0);
+				if (lists1 != null && lists1.size() !=0){
+					newgetter=(User) lists1.get(0);
+				}
+				
 			
 			}
 			bean=new AllShenPiBean(approvetype, approveId, approvetitle, newTime, newgetter, state, ispass);

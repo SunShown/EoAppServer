@@ -1,6 +1,7 @@
 package com.eo.dao.impl;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -445,6 +446,7 @@ public class SignSettingInfoDaoImpl implements ISignSettingInfoDao {
 
 		// 遍历公司所有员工
 		String sqlString9 = "SELECT employeeId ,SUM(workTimes) FROM signinandoffinfo WHERE month(signDate)= ? GROUP BY employeeId ORDER BY SUM(workTimes) DESC";
+		System.out.println(sqlString9+"  "+currentMonth);
 		try {
 			pstmt9 = conn9.prepareStatement(sqlString9);
 			pstmt9.setObject(1, currentMonth);
@@ -456,12 +458,13 @@ public class SignSettingInfoDaoImpl implements ISignSettingInfoDao {
 			e.printStackTrace();
 		}
 		// 注意这时候取出来的Map是无序的，虽然已经数据已经排过序了
-		afterEmpIdList.add(empIdList.get(0));
-		afterEmpIdList.add(empIdList.get(1));
-		afterEmpIdList.add(empIdList.get(2));
+	
+//		afterEmpIdList.add(empIdList.get(0));
+//		afterEmpIdList.add(empIdList.get(1));
+//		afterEmpIdList.add(empIdList.get(2));
 		System.out.println(afterEmpIdList);
 		DBConn.close(conn9, pstmt9, rsResultSet9);
-		return afterEmpIdList;
+		return empIdList;
 	}
 
 	@Override
@@ -735,6 +738,7 @@ public class SignSettingInfoDaoImpl implements ISignSettingInfoDao {
 			Long companyIdLong, Long employeeIdLong) {
 		int yearInt = Integer.valueOf(yearString);
 		int monthInt = Integer.valueOf(monthString);
+		String dataString =yearString+"-"+monthString+"-3";
 		System.out.println("年：" + yearInt);
 		System.out.println("月：" + monthInt);
 		System.out.println("公司Id：" + companyIdLong);
@@ -742,14 +746,14 @@ public class SignSettingInfoDaoImpl implements ISignSettingInfoDao {
 		Connection conn17 = DBConn.getConn();
 		PreparedStatement pstmt17 = null;
 		ResultSet rsResultSet17 = null;
-		String sqlString17 = "SELECT AVG(workTimes) FROM signinandoffinfo WHERE companyId = ? AND employeeId = ? AND year(signDate)=? AND month(signDate)=?";
+		String sqlString17 = "SELECT AVG(workTimes) FROM signinandoffinfo WHERE companyId = ? AND employeeId = ? AND date_format(signDate,'%Y-%m')= date_format(?,'%Y-%m')";
 		System.out.println("查询平均工时语句：" + sqlString17);
 		try {
 			pstmt17 = conn17.prepareStatement(sqlString17);
 			pstmt17.setObject(1, companyIdLong);
-			pstmt17.setObject(2, 4);
-			pstmt17.setObject(3, yearInt);
-			pstmt17.setObject(4, monthInt);
+			pstmt17.setObject(2, employeeIdLong);
+			pstmt17.setObject(3, dataString);
+	
 			rsResultSet17 = pstmt17.executeQuery();
 			while (rsResultSet17.next()) {
 				System.out.println("平均工时：" + rsResultSet17.getFloat(1));
@@ -808,6 +812,7 @@ public class SignSettingInfoDaoImpl implements ISignSettingInfoDao {
 	 */
 	@Override
 	public List<Integer> queryPersonCountList(String yearString,
+		
 			String monthString, Long companyIdLong, Long employeeIdLong) {
 		List<Integer> statusList = new ArrayList<Integer>();
 		List<Integer> statusCountList = new ArrayList<Integer>();
@@ -820,18 +825,20 @@ public class SignSettingInfoDaoImpl implements ISignSettingInfoDao {
 		Connection conn18 = DBConn.getConn();
 		PreparedStatement pstmt18 = null;
 		ResultSet rsResultSet18 = null;
+		String date = yearString +"-"+monthString+"-05";
+//		Date date2 = new Date(Integer.parseInt(yearString),Integer.parseInt(monthString),2);
+//		System.out.println(yearString+"  "+date2);
 		System.out.println("statusList的大小：" + statusList.size());
 		for (int i = 0; i < statusList.size(); i++) {
 			// statusList = new ArrayList<Integer>();
 			statusInt = statusList.get(i);
-			String sqlString18 = "SELECT COUNT(employeeId) FROM signinandoffinfo WHERE companyId = ? AND employeeId = ? AND year(signDate)=? AND month(signDate)=? AND signInStatus = ?";
+			String sqlString18 = "SELECT COUNT(employeeId) FROM signinandoffinfo WHERE companyId = ? AND employeeId = ? AND date_format(signDate,'%Y-%m') = date_format(?,'%Y-%m') AND signInStatus = ?";
 			try {
 				pstmt18 = conn18.prepareStatement(sqlString18);
 				pstmt18.setObject(1, companyIdLong);
-				pstmt18.setObject(2, 4);
-				pstmt18.setObject(3, Integer.valueOf(yearString));
-				pstmt18.setObject(4, Integer.valueOf(monthString));
-				pstmt18.setObject(5, statusInt);
+				pstmt18.setObject(2, employeeIdLong);
+				pstmt18.setObject(3, date);
+				pstmt18.setObject(4, statusInt);
 				System.out.println("sqlString18语句：" + sqlString18);
 				rsResultSet18 = pstmt18.executeQuery();
 				while (rsResultSet18.next()) {
